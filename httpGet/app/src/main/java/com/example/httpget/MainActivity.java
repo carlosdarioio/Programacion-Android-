@@ -19,12 +19,13 @@ import org.json.JSONObject;
 public class MainActivity extends AppCompatActivity {
 
     private RequestQueue queue;
-    TextView txt;
+    private TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        textView=(TextView) findViewById(R.id.textView);
         queue= Volley.newRequestQueue(this);
 
         obtenerDatosVolley();
@@ -47,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
                     JSONObject mJSONObject = mJSONArray.getJSONObject(2);
 
                     String name = mJSONObject.getString("name");
+
+                    textView.setText(name);
                     Toast.makeText(MainActivity.this,"Nombre:"+name,Toast.LENGTH_LONG).show();
 
 
@@ -55,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
                 }
 
             }
-        }, new Response.ErrorListener() {
+        },
+            new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error)
             {
@@ -63,11 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
         queue.add(request);
-
-
-
     }
 
 }
