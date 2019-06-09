@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     {
         String url="https://api.androidhive.info/contacts/";
 
+
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response)
@@ -59,15 +60,20 @@ public class MainActivity extends AppCompatActivity {
 
             }
         },
-            new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error)
-            {
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error)
+                    {
 
 
-            }
-        });
+                    }
+                });
         queue.add(request);
-    }
+    }//fin obtenerdatis1
+
+   //------------------------------------------------
+
+
+    //----------------------------------------------
 
 }
