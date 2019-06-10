@@ -1,7 +1,9 @@
 package com.example.httpget;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,15 +18,22 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     private RequestQueue queue;
-    TextView txt;
+    private TextView txt;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        txt=(TextView) findViewById(R.id.TextView);
+
         queue= Volley.newRequestQueue(this);
 
         obtenerDatosVolley();
@@ -32,9 +41,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
     private void obtenerDatosVolley()
     {
-        String url="https://api.androidhive.info/contacts/";
+        //20190610 obtendiendo datos desde los https funciona
+        //String url="https://api.androidhive.info/contacts/";
+        //String url="http://jsonplaceholder.typicode.com/todos/1";
+        //ninguno de estos locales funciona
+        //String url="http://10.1.0.136/CFService/Service1.svc/GetData/xr";//varios resulados
+        String url="http://10.1.0.136/CFService/Service1.svc/GetData2/xr";//un resultados
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
@@ -42,16 +58,24 @@ public class MainActivity extends AppCompatActivity {
             {
 
                 try {
-                    JSONArray mJSONArray=response.getJSONArray("contacts");
+                    //varios resultados
+                    //JSONArray mJSONArray=response.getJSONArray("contacts");
+                    //JSONObject mJSONObject = mJSONArray.getJSONObject(0);
+                    //String name = mJSONObject.getString("name");
 
-                    JSONObject mJSONObject = mJSONArray.getJSONObject(2);
+                    //un reusltado
+                    String name=response.getString("title");
 
-                    String name = mJSONObject.getString("name");
+
+
+                    txt.setText(name);
                     Toast.makeText(MainActivity.this,"Nombre:"+name,Toast.LENGTH_LONG).show();
 
 
                 } catch (JSONException e) {
+                    txt.setText("error2");
                     e.printStackTrace();
+
                 }
 
             }
@@ -59,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error)
             {
-
+                txt.setText("error3");
 
             }
         });
@@ -68,6 +92,12 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    }
+    }//Fin obtener Datos Volley
+
+
+    //------------------------------------------------------------------------------------
+
+
+    //-------------------------------------------------------------------------------------
 
 }
