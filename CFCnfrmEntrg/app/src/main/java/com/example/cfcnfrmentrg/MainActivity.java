@@ -71,7 +71,12 @@ public class MainActivity extends AppCompatActivity {
         //String url="http://jsonplaceholder.typicode.com/todos/1";
         //ninguno de estos locales funciona
         //String url="http://10.1.0.136/CFService/Service1.svc/GetData/xr";//varios resulados
-        String url="http://10.1.0.136/CFService/Service1.svc/GetData2/"+firstNumEditText.getText().toString();//un resultados
+        //String url="http://10.1.0.136/CFService/Service1.svc/GetData2/"+firstNumEditText.getText().toString();//un resultados
+        //test update
+        String url="http://10.1.0.136/CFService/Service1.svc/ConfirmUser/"+firstNumEditText.getText().toString();//un resultados
+
+
+
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response)
@@ -84,7 +89,10 @@ public class MainActivity extends AppCompatActivity {
                     //String name = mJSONObject.getString("name");
 
                     //un reusltado
-                    String name=response.getString("title");
+                    //String name=response.getString("title");
+
+                    //test update
+                    String name=response.getString("Result");
 
                     resultTextView.setText(name);
                     Toast.makeText(MainActivity.this,"result:"+response,Toast.LENGTH_LONG).show();
