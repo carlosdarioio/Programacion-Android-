@@ -24,14 +24,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="sendMessage"
-            android:text="Ejemplo2" />
+            android:text="Get html" />
 
         <Button
             android:id="@+id/button5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="P3"
-            android:text="Ejemplo3 StandartRequest" />
+            android:text="Get Class Json" />
 
         <Button
             android:id="@+id/button6"

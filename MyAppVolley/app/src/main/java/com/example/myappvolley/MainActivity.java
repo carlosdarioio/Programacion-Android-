@@ -20,10 +20,6 @@ import com.android.volley.toolbox.DiskBasedCache;
 import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.StringRequest;
 
-
-
-
-
 //RequestQueue
 
 public class MainActivity extends AppCompatActivity {
@@ -31,9 +27,6 @@ public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.myAppVolley.MESSAGE";
 
     public TextView textView;
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,19 +38,14 @@ public class MainActivity extends AppCompatActivity {
 
 //---------------
         RequestQueue requestQueue;
-
 // Instantiate the cache
         Cache cache = new DiskBasedCache(getCacheDir(), 1024 * 1024); // 1MB cap
-
 // Set up the network to use HttpURLConnection as the HTTP client.
         Network network = new BasicNetwork(new HurlStack());
-
 // Instantiate the RequestQueue with the cache and network.
         requestQueue = new RequestQueue(cache, network);
-
 // Start the queue
         requestQueue.start();
-
         String url ="https://www.example.com";
 
 // Formulate the request and handle the response.
@@ -67,8 +55,6 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(String response) {
                         // Do something with the response
                         textView.setText("Response is: "+ response.substring(0,500));
-
-
                     }
                 },
                 new Response.ErrorListener() {
@@ -76,30 +62,19 @@ public class MainActivity extends AppCompatActivity {
                     public void onErrorResponse(VolleyError error) {
                         // Handle error
                         textView.setText("error ");
-
                     }
                 });
 
 // Add the request to the RequestQueue.
         requestQueue.add(stringRequest);
-
-
 //----------------
-
-
-
-
-
-
-
-
-
-
 
     }//fin void on create
 
 /****gggg****/
     /** Called when the user taps the Send button */
+
+    //get html
     public void sendMessage(View view) {
         // Do something in response to button
         Intent intent = new Intent(this, Main2Activity.class);
@@ -109,17 +84,17 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    //Get Json Class
     public void P3(View view) {
         // Do something in response to button
         Intent intent = new Intent(this, Main3Activity.class);
         startActivity(intent);
     }
 
-
+    //Pruebas
     public void Pruebas(View view) {
         // Do something in response to button
         Intent intent = new Intent(this, Pruebas.class);
         startActivity(intent);
     }
-
 }

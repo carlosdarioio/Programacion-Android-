@@ -46,7 +46,9 @@ public class Pruebas extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pruebas);
-        new JsonTask().execute("https://jsonplaceholder.typicode.com/todos/1");
+
+        new JsonTask().execute("http://10.1.0.136/CFService/Service1.svc/GetData/xr");
+        //new JsonTask().execute("https://jsonplaceholder.typicode.com/todos/1");
 
         btnHit = (Button) findViewById(R.id.btnHit);
         post = (Button) findViewById(R.id.xpost);
