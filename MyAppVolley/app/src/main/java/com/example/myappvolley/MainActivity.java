@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-
+import android.widget.Toast;
 
 
 import com.android.volley.Cache;
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         textView = (TextView) findViewById(R.id.textView);
-        textView.setText("error osea");
+        textView.setText("txt");
 
 //---------------
         RequestQueue requestQueue;
@@ -54,7 +54,8 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         // Do something with the response
-                        textView.setText("Response is: "+ response.substring(0,500));
+                        //textView.setText("Response is: "+ response.substring(0,500));
+                        Toast.makeText(MainActivity.this,"get:"+response.substring(0,500),Toast.LENGTH_LONG).show();
                     }
                 },
                 new Response.ErrorListener() {
@@ -95,6 +96,20 @@ public class MainActivity extends AppCompatActivity {
     public void Pruebas(View view) {
         // Do something in response to button
         Intent intent = new Intent(this, Pruebas.class);
+        startActivity(intent);
+    }
+
+    //VolleyList ejemplo https://demonuts.com/android-listview-using-volley/
+    public void xListView(View view) {
+        // Do something in response to button
+        Intent intent = new Intent(this, Main4ActivityLisViewSelect.class);
+        startActivity(intent);
+    }
+
+    //VolleyList codigo propio
+    public void VolleyList(View view) {
+        // Do something in response to button
+        Intent intent = new Intent(this, Main5ActivityVolleyList.class);
         startActivity(intent);
     }
 }

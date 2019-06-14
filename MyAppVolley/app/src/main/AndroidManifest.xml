@@ -9,11 +9,20 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:usesCleartextTraffic="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Pruebas"></activity>
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Main5ActivityVolleyList"></activity>
+        <activity
+            android:name=".Main4ActivityLisViewSelect"
+            android:label="@string/title_activity_main4_lis_view_select"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".GridView5Activity"
+            android:label="@string/title_activity_grid_view5"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Pruebas" />
         <activity android:name=".Main3Activity" />
         <activity android:name=".Main2Activity" />
         <activity android:name=".MainActivity">

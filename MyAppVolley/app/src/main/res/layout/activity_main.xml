@@ -34,11 +34,37 @@
             android:text="Get Class Json" />
 
         <Button
+            android:id="@+id/btnGetListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="xListView"
+            android:text="DataModel Volley ListView" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="VolleyList"
+            android:text="Volley ListV propio" />
+
+        <Button
             android:id="@+id/button6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="Pruebas"
             android:text="Pruebas" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Get from local sqlite(pendiente)" />
+
+        <Button
+            android:id="@+id/btnGridV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GridView Android Studio" />
 
 
     </LinearLayout>

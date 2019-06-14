@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My App Volley</string>
+    <string name="title_activity_grid_view5">GridView5Activity</string>
+    <string name="title_activity_main4_lis_view_select">Main4ActivityLisViewSelect</string>
 </resources>
