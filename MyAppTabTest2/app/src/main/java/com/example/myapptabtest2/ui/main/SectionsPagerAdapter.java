@@ -8,6 +8,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.example.myapptabtest2.FragmentMain;
+import com.example.myapptabtest2.FragmentMain2;
+import com.example.myapptabtest2.FragmentMain3;
 import com.example.myapptabtest2.R;
 
 /**
@@ -29,6 +32,22 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
+
+        switch (position){
+
+            case 0:
+                FragmentMain xBlankFragmentx1 = new FragmentMain();
+                return xBlankFragmentx1;
+            case 1:
+                FragmentMain2 xBlankFragmentx2 = new FragmentMain2();
+                return xBlankFragmentx2;
+            case 2:
+                FragmentMain3 xBlankFragmentx3 = new FragmentMain3();
+                return xBlankFragmentx3;
+        }
+
+
+
         return PlaceholderFragment.newInstance(position + 1);
     }
 
