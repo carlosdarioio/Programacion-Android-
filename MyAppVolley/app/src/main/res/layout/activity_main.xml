@@ -48,11 +48,24 @@
             android:text="Volley ListV propio" />
 
         <Button
+            android:id="@+id/btnTabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="TabLayout"
+            android:text="Tabs" />
+
+        <Button
+            android:id="@+id/btnTabsFrame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tabs+Framework" />
+
+        <Button
             android:id="@+id/button6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="Pruebas"
-            android:text="Pruebas" />
+            android:text="Pruebas alola" />
 
         <Button
             android:id="@+id/button2"

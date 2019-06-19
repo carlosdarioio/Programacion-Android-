@@ -1,13 +1,11 @@
 package com.example.myappvolley;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 
 import com.android.volley.Cache;
 import com.android.volley.Network;
@@ -53,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        // Do something with the response
+                        // Do something with the respo  nse
                         //textView.setText("Response is: "+ response.substring(0,500));
                         Toast.makeText(MainActivity.this,"get:"+response.substring(0,500),Toast.LENGTH_LONG).show();
                     }
@@ -111,5 +109,22 @@ public class MainActivity extends AppCompatActivity {
         // Do something in response to button
         Intent intent = new Intent(this, Main5ActivityVolleyList.class);
         startActivity(intent);
+    }
+
+    //TabLayout
+    public void TabLayout(View view)
+    {
+        //Do Something in repsonse to button --escrito xd
+        Intent intent = new Intent(this,Main6TabActivityx.class);
+        startActivity(intent);
+
+    }
+    //TabLayout + Framework
+    public void TabFramework(View view)
+    {
+        //Do Something in repsonse to button --escrito xd
+        //Intent intent = new Intent(this,Main6TabActivityx.class);
+        //startActivity(intent);
+
     }
 }
