@@ -1,8 +1,31 @@
 <resources>
     <string name="app_name">MyApplicationBottomNav</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">Cliente</string>
+    <string name="title_dashboard">Articulos</string>
+    <string name="title_notifications">Logistica</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="title_activity_main3">Main3Activity</string>
+    <string-array name="almacenes_array">
+        <item>Almacen</item>
+        <item>025</item>
+        <item>026</item>
+        <item>002</item>
+        <item>053</item>
+        <item>045</item>
+        <item>038</item>
+        <item>081</item>
+    </string-array>
+
+    <string-array name="termino">
+        <item>Seleccionar Forma Pago</item>
+        <item>CNT-Contado</item>
+        <item>TAR-Tarjeta De Credito</item>
+    </string-array>
+
+    <string-array name="entrega">
+        <item>Seleccionar Entrega</item>
+        <item>Llevara</item>
+        <item>Enviara</item>
+    </string-array>
+
 </resources>
