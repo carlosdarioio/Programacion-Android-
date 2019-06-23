@@ -3,6 +3,7 @@ package com.example.myappkotlin
 import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -21,29 +22,26 @@ import java.util.ArrayList
 
 class Main2ActivityLoggin : AppCompatActivity() {
 
-    //url
     //private val URLstring = "http://10.1.0.136/CFService/Service1.svc/Getusers/"
     private val URLstring = "https://api.androidhive.info/contacts/"
     private var listView: ListView? = null
     //internal var dataModelArrayList: ArrayList<UserModel>
     var mApp = GlobalsVar()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2_loggin)
 
-        //var mApp = GlobalsVar()
-        mApp.globalVar="alola"
-        var strGlobalVar = mApp.globalVar
-        Toast.makeText(this@Main2ActivityLoggin, "Global :$strGlobalVar", Toast.LENGTH_LONG).show()
-
-
+        //test shared Preferences
+        val sharedPref: SharedPreferences = getSharedPreferences(mApp.PREF_NAME, mApp.PRIVATE_MODE)
+        val txt=sharedPref.getString(mApp.PREF_NAME,null)
+        Toast.makeText(this@Main2ActivityLoggin, txt, Toast.LENGTH_SHORT).show()
 
 
         val btnenter = findViewById<Button>(R.id.btnentrar)
-        val user = contra
-        val psd = usuario //asignando sin findViewById<xxx>(R.id.xxx)
+        val user = usuario
+        val psd = contra //VERIFICAR COMO OBTENER TEXTO METIDO EN PSD
+        //PENDIENT EASIGNAR USER Y PSD A URLstring PARA ENVIAR JSON Y OBTENER LOGGIN
         btnenter.setOnClickListener {
 
             JSONuserLoggin()
@@ -79,6 +77,12 @@ class Main2ActivityLoggin : AppCompatActivity() {
                     // mejor mandar desde el server true o false pa q deje entrar
                     if(1==1)
                     {
+                        val sharedPref: SharedPreferences = getSharedPreferences(mApp.PREF_USER, mApp.PRIVATE_MODE)
+                        val editor = sharedPref.edit()
+                        //si la rsspuesta json del loggin es correcta asignamos el user a PREF_USER
+                        val user = usuario
+                        editor.putString(mApp.PREF_USER, user.text.toString())
+                        editor.commit()
                         val inte= Intent(this,Main3ActivityCLDatos::class.java)
                         startActivity(inte)
                         finish()
