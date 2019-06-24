@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:text="Loggin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/txtLoggin" android:layout_weight="1"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1" android:textStyle="bold"
+                    android:gravity="center"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" app:srcCompat="@drawable/logginicon"
+                    android:id="@+id/imageView"/>
+            <TextView
+                    android:text="Especificar usuario y contra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textView2"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1" android:textSize="24sp"
+                    android:gravity="center"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/txtuser" android:hint="Usuario"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:ems="10"
+                    android:id="@+id/txtcontra" android:hint="Contra"/>
+            <Button
+                    android:text="Entrar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/btnEntrar"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

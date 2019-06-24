@@ -34,5 +34,14 @@ class Main3ActivityCLDatos : AppCompatActivity() {
             startActivity(inte)
             finish();
         }
+
+        //por aqui vas si el texto de txtClient  no es vavio buscar cl con el texto puest
+        //si solo alla 1 asignar valores a los textos e insertar los datos en la tabla
+        //si alla mas de uno abrir lista mostrando resultados(ver Main5ActivityVolleyList)
+        //cuando le de clic a uno que ingrese lo ingrese en la tabla y seleccione
+        var xbtnFindCl=btnFindCl
+        xbtnFindCl.setOnClickListener {
+
+        }
     }
 }

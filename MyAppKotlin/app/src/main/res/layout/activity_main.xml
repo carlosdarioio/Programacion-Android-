@@ -65,6 +65,10 @@
                     android:text="Logistica"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:id="@+id/button14"/>
+            <Button
+                    android:text="Cl Lis cuando busca"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/btncllist"/>
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
