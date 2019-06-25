@@ -13,14 +13,17 @@
         <TextView
                 android:text="Escribir Factura"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/textView" android:layout_weight="0"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:layout_weight="0"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display2"/>
         <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="text"
                 android:ems="10"
-                android:id="@+id/editnumero" android:layout_weight="0" android:hint="Numero"/>
+                android:id="@+id/editnumero" android:layout_weight="0"
+                android:hint="Escanear"/>
         <Button
                 android:text="Enviar"
                 android:layout_width="match_parent"
