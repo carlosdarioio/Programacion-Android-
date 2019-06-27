@@ -27,11 +27,11 @@
                     android:layout_weight="1" android:background="#00F5F0F0"/>
             <ImageButton
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" app:srcCompat="@drawable/directionicon"
+                    android:layout_height="wrap_content" app:srcCompat="@drawable/producticon"
                     android:id="@+id/btnArticulos" android:layout_weight="1" android:background="#00F5F0F0"/>
             <ImageButton
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" app:srcCompat="@drawable/producticon"
+                    android:layout_height="wrap_content" app:srcCompat="@drawable/directionicon"
                     android:id="@+id/btnLogis" android:layout_weight="1" android:background="#00F5F0F0"/>
         </LinearLayout>
         <LinearLayout
@@ -52,7 +52,7 @@
                         android:layout_height="wrap_content"
                         android:inputType="textPersonName"
                         android:ems="12"
-                        android:id="@+id/editText" android:hint="C999999"/>
+                        android:id="@+id/txtCL" android:hint="C999999"/>
                 <Button
                         android:text="..."
                         android:layout_width="wrap_content"

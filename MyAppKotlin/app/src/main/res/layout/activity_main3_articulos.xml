@@ -23,11 +23,11 @@
                     android:layout_weight="1" android:background="#00F5F0F0"/>
             <ImageButton
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" app:srcCompat="@drawable/directionicon"
+                    android:layout_height="wrap_content" app:srcCompat="@drawable/producticon"
                     android:id="@+id/btnArticulos" android:layout_weight="1" android:background="#00F5F0F0"/>
             <ImageButton
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" app:srcCompat="@drawable/producticon"
+                    android:layout_height="wrap_content" app:srcCompat="@drawable/directionicon"
                     android:id="@+id/btnLogis" android:layout_weight="1" android:background="#00F5F0F0"/>
         </LinearLayout>
     </LinearLayout>

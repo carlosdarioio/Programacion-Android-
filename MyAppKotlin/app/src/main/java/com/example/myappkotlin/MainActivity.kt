@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main2_loggin.*
 
 class MainActivity : AppCompatActivity() {
@@ -18,6 +19,12 @@ class MainActivity : AppCompatActivity() {
         val btnloggin = findViewById<Button>(R.id.btnloggin)
         btnloggin.setOnClickListener {
             val inte= Intent(this,Main2ActivityLoggin::class.java)
+            startActivity(inte)
+            finish();
+        }
+
+        btncllist.setOnClickListener{
+            var inte= Intent(this,testListCL::class.java)
             startActivity(inte)
             finish();
         }
