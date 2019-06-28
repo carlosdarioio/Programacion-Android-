@@ -25,7 +25,6 @@ class MainActivity : AppCompatActivity() {
 
         btnBuscar.setOnClickListener {
 
-
             var txtxl=txtfactura.text.toString()
             Toast.makeText(this@MainActivity, "entra ", Toast.LENGTH_LONG).show()
             val stringRequest = StringRequest(
