@@ -1,20 +1,29 @@
 package com.example.cnfmrentrega
 
 import android.content.Context
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.Toast
+import com.android.volley.Request
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main_activity2_list_oinv.*
 import kotlinx.android.synthetic.main.row_main_listcl.view.*
+import org.json.JSONException
+import org.json.JSONObject
 
 class MainActivity2ListOinv : AppCompatActivity() {
     var mApp = GlobalsVar()
-    var getextra="";
-    private var URLstring = "http://10.1.0.136/CFService/SapService.svc/getinv1FromFact/"
+    var getextra=""
+    private var URLstring = "http://10.1.0.136/CFService/SapService.svc/FindFactura/1"
 
 
 
@@ -35,6 +44,69 @@ class MainActivity2ListOinv : AppCompatActivity() {
 
 
 
+
+        //-----------------------------------
+        var txtxl=getextra
+        Toast.makeText(this@MainActivity2ListOinv, "entra ", Toast.LENGTH_LONG).show()
+        val stringRequest = StringRequest(
+            //asignando valores falta poner el del user que entra
+            Request.Method.GET, URLstring+txtxl+"/Venta07",
+            Response.Listener { response ->
+                Log.d("strrrrr", ">>$response")
+                try {
+
+
+
+                    //obteniendo status para verificar estado de la busqueda
+
+
+                    //por aqyu vas asignar mJSONArray al array  names
+                    val xresponse = JSONObject(response)
+                    val mJSONArray = xresponse.getJSONArray("users")//nombre de objec json
+                    val mJSONObject = mJSONArray.getJSONObject(2)
+                    val name = mJSONObject.getString("name")
+                    Toast.makeText(this@MainActivity2ListOinv, "Nombre:$name", Toast.LENGTH_LONG).show()
+
+
+                        /*esto lo ocupas cuando seleccione factura
+                        var sharedPref: SharedPreferences = getSharedPreferences(mApp.DocEntry, mApp.PRIVATE_MODE)
+                        var editor = sharedPref.edit()
+
+                        editor.putString(mApp.DocEntry, xresponse.getString("DocEntry"))
+                        editor.commit()
+
+                        sharedPref = getSharedPreferences(mApp.CardName, mApp.PRIVATE_MODE)
+                        editor = sharedPref.edit()
+
+                        editor.putString(mApp.CardName, xresponse.getString("CardName"))
+                        editor.commit()*/
+
+                        //si encontro 1 O MAS  resultados lo redirecciona a MainActivity2ListOinv para que le de clicj a la que ocupa
+                        val intent = Intent(this, MainActivity2ListOinv::class.java)
+                        intent.putExtra("factura", txtxl)//asignando valor de factura a buscar
+                        startActivity(intent)
+
+
+
+
+
+                } catch (e: JSONException) {
+                    Toast.makeText(this@MainActivity2ListOinv, "Errorx ", Toast.LENGTH_LONG).show()
+                    e.printStackTrace()
+                }
+            },
+            Response.ErrorListener { error ->
+                //displaying the error in toast if occurrs
+                Toast.makeText(applicationContext, error.message, Toast.LENGTH_SHORT).show()
+            })
+
+        // request queue
+        val requestQueue = Volley.newRequestQueue(this)
+        requestQueue.add(stringRequest)
+        //-------------------------------------
+
+
+
     }//fin oncrteate
 
     //inicio class MyCustomAdapter ___ alola funciona para añadir valor al main_listview__lista donde irian la busqueda
@@ -48,6 +120,8 @@ class MainActivity2ListOinv : AppCompatActivity() {
 
         //2019 06 28
         //var tiene el docentry de fatura obtene el json array y poner en el arrayListOf
+
+
 
         private val names= arrayListOf<String>(
 
@@ -98,4 +172,9 @@ class MainActivity2ListOinv : AppCompatActivity() {
 
         }
     }//fin class MyCustomAdapter
+
+
+
+
+
 }//fin class
