@@ -11,6 +11,7 @@ import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import com.example.a3getjsoninclass.DATA.Lusers
 import com.example.a3getjsoninclass.DATA.users
+import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_main.*
 import org.json.JSONException
 import org.json.JSONObject
@@ -20,9 +21,8 @@ class MainActivity : AppCompatActivity() {
     private var queue: RequestQueue? = null
     //val xusers:users
 
-    var xlist: List<Lusers>?=null
-    var xusers:users=users("","",xlist
-    )
+   // var xlist: List<Lusers>?=null
+    //var xusers:users=users("","",xlist    )
 
 
 
@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
 
                     //PROBA ASIGNARLE VALORES A LA CLASE
                     val name1 = response.getString("message")
-                    val name2 = mJSONObject.getString("nombre")
+                    var name2 = mJSONObject.getString("nombre")
                     //OPCION DIRECTA
                     //val name2 = response.getJSONArray("users").getJSONObject(0).getString("nombre")
 
@@ -66,13 +66,10 @@ class MainActivity : AppCompatActivity() {
                     //un reusltado
                     //val name = response.getString("title")
 
-                    /*
-                    var str_user: String = ""
-                    for (i in 0 until mJSONArray.length()) {
-                        var jsonInner: JSONObject = mJSONArray.getJSONObject(i)
-                        str_user = str_user + "\n" + jsonInner.get("login")
-                    }*/
 
+                    val topic = Gson().fromJson(response.toString(), Json4Kotlin_Base::class.java  )
+
+                     name2 = topic.users[1].nombre
 
                     txt.setText("mesaage: $name1 nombre: $name2")
                     Toast.makeText(this@MainActivity, "Nombre:$name1 Nombre2:$name2", Toast.LENGTH_LONG).show()
