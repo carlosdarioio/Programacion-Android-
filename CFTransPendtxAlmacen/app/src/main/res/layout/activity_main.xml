@@ -12,8 +12,17 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" app:srcCompat="@mipmap/ic_launcher" android:id="@+id/imageView"
+                android:layout_weight="1"/>
         <TextView
-                android:text="TextView"
+                android:text="Transferencias pendientes x almacen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/textView2" android:layout_weight="1"
+                android:textSize="18sp" android:fontFamily="serif" android:lineSpacingExtra="8sp"/>
+        <TextView
+                android:text="Especificar Almacen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/textView" android:layout_weight="1"/>
         <EditText
@@ -23,8 +32,10 @@
                 android:ems="10"
                 android:id="@+id/almacen" android:layout_weight="1" android:hint="Poner Almacen:025/026/038 etc"/>
         <Button
-                android:text="Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/btnBuscar"/>
+                android:text="Buscar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/btnBuscar"
+                android:gravity="center"
+        />
     </LinearLayout>
 </RelativeLayout>

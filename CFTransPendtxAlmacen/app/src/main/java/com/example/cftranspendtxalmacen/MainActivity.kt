@@ -11,19 +11,26 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        almacen.setText("025")
+        btnBuscar.setOnClickListener {
+            BuscarTransxAlmacen()
+        }
     }
 
 
-    fun BuscarTransxAlmacen(){
-        val xalmacen= almacen.text
+    public fun BuscarTransxAlmacen(){
+        val xalmacen:String= almacen.text.toString()
 
-        if(xalmacen.toString()=="025" || xalmacen.toString()=="026" || xalmacen.toString()=="002"
-           || xalmacen.toString()=="053" || xalmacen.toString()=="007" || xalmacen.toString()=="010")
-        {
-            val intent = Intent(this, TransfxAlm::class.java)
+if(xalmacen=="025" ||
+   xalmacen=="026" ||
+   xalmacen=="002" ||
+   xalmacen=="053" ||
+   xalmacen=="007" ||
+   xalmacen=="010")
+        {   var intent = Intent(this, TransfxAlm::class.java)
             intent.putExtra("xalmacen", xalmacen)
             startActivity(intent)
-
+            finish();
         }
         else
         {
