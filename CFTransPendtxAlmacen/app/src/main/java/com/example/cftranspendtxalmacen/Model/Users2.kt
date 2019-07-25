@@ -18,6 +18,7 @@ data class Users2 (
 
 	var DocEntry : String,
 	var Articulo : String,
+	var Descripcion:String,
 	var Cantidad : Int,
 	var Almacen : String
 ): Serializable
