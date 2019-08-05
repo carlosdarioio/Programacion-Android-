@@ -11,6 +11,7 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 
 package com.example.a101postjsclass
 
+//@Serializable
 data class Json4Kotlin_Base (
 
 	var docnum : Int,
