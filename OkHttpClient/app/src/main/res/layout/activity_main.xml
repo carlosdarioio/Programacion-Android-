@@ -35,5 +35,13 @@
                 android:text="post var"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:id="@+id/btnpost"/>
+        <Button
+                android:text="Test1 post solo texto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/btntest1"/>
+        <Button
+                android:text="Test1 post texto y lista"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/btntest2"/>
     </LinearLayout>
 </RelativeLayout>
