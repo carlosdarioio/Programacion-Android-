@@ -31,7 +31,13 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Obtener" />
+            android:text="Obtener Get" />
+
+        <Button
+            android:id="@+id/btnpost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test post num" />
 
 
     </LinearLayout>

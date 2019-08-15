@@ -37,9 +37,9 @@ import java.util.ArrayList;
 
         private String URLstring = "http://10.1.0.136/CFService/Service1.svc/Getusers/";
         private static ProgressDialog mProgressDialog;
-        private ListView listView;
-        ArrayList<UserModel> dataModelArrayList;
-        private UserListAdapter listAdapter;
+        private ListView listView;//need
+        ArrayList<UserModel> dataModelArrayList;//need
+        private UserListAdapter listAdapter;//need
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +48,6 @@ import java.util.ArrayList;
             listView = findViewById(R.id.lv);
             retrieveJSON();
 
-
-
             //setOnItemClickListener
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -57,11 +55,12 @@ import java.util.ArrayList;
                     //Obtendiendo datos del dato al que se le dio clic
                     UserModel p = (UserModel ) listView.getItemAtPosition(position);
 
+
                     //Main5ActivityVolleyList
                     Toast.makeText(Main5ActivityVolleyList.this,"Get:"+p.getNombre(),Toast.LENGTH_LONG).show();
                 }
             });//fin setOnItemClickListener
-        }
+        }//fon oncreate
 
         private void retrieveJSON() {
 
@@ -82,6 +81,7 @@ import java.util.ArrayList;
                                     dataModelArrayList = new ArrayList<>();
                                     JSONArray dataArray  = obj.getJSONArray("users");//nombre de objec json
 
+                                    //need
                                     for (int i = 0; i < dataArray.length(); i++) {
 
                                         UserModel playerModel = new UserModel();
@@ -96,6 +96,7 @@ import java.util.ArrayList;
 
                                     }
 
+                                    //need
                                     setupListview();
 
                                 }
@@ -119,8 +120,9 @@ import java.util.ArrayList;
             requestQueue.add(stringRequest);
 
 
-        }
+        }//fin rerieve json
 
+        //insertando datos arraylist en el list
         private void setupListview(){
             removeSimpleProgressDialog();  //will remove progress dialog
             listAdapter = new UserListAdapter(this, dataModelArrayList);

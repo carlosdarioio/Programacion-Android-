@@ -8,4 +8,9 @@
     <string name="tab_text_3">Tab 3</string>
     <string name="title_activity_tabbed_act2">TabbedAct2</string>
     <string name="title_activity_main6_tab_activityx">Main6TabActivityx</string>
+    <string name="title_activity_main7_tab_yframes">Main7TabYFrames</string>
+    <string name="tabyframes_text_1">xTab 1</string>
+    <string name="tabyframes_text_2">xTab 2</string>
+    <string name="tabyframes_text_3">xTab 2</string>
+
 </resources>

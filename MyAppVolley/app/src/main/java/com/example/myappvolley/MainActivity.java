@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
     //TabLayout
     public void TabLayout(View view)
     {
-        //Do Something in repsonse to button --escrito xd
+        //Do Somlvething in repsonse to button --escrito xd
         Intent intent = new Intent(this,Main6TabActivityx.class);
         startActivity(intent);
 
@@ -123,8 +123,8 @@ public class MainActivity extends AppCompatActivity {
     public void TabFramework(View view)
     {
         //Do Something in repsonse to button --escrito xd
-        //Intent intent = new Intent(this,Main6TabActivityx.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this,Main7TabYFrames.class);
+        startActivity(intent);
 
     }
 }
