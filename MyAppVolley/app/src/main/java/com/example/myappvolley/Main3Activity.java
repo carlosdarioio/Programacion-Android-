@@ -28,7 +28,7 @@ import static java.sql.DriverManager.println;
 public class Main3Activity extends AppCompatActivity {
     TextView textView;
     EditText ediText;
-    Button button,xbtnpost;
+    Button button,xbtnpost,btnpostwcf;
     private RequestQueue queue;
     private RequestQueue queue2;
     JSONArray mJSONArray;
@@ -49,6 +49,8 @@ public class Main3Activity extends AppCompatActivity {
         ediText=findViewById(R.id.editText);
         button=findViewById(R.id.button);
         xbtnpost=findViewById(R.id.btnpost);
+        btnpostwcf=findViewById(R.id.btnpostwcf);
+
 
         obtenerDatosVolley();
 
@@ -84,25 +86,16 @@ public class Main3Activity extends AppCompatActivity {
 
                 PostVolley1();
                 Toast.makeText(Main3Activity.this,"Post : "+x2,Toast.LENGTH_LONG).show();
-                /*
-                try
-                {
-
-                    int num=Integer.parseInt(ediText.getText().toString());
-                    mJSONObject = mJSONArray.getJSONObject(num);
-                    String name = mJSONObject.getString("nombre");
-                    Toast.makeText(Main3Activity.this,"Get:"+name,Toast.LENGTH_LONG).show();
+            }
+        });
 
 
-                    textView.setText("Get:"+name);
+        btnpostwcf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-
-                } catch (JSONException e) {
-                    Toast.makeText(Main3Activity.this,"XError2 get:",Toast.LENGTH_LONG).show();
-                    e.printStackTrace();
-                }*/
-
-
+                PostVolleyinsert();
+                Toast.makeText(Main3Activity.this,"Post : "+x2,Toast.LENGTH_LONG).show();
             }
         });
 
@@ -168,9 +161,6 @@ public class Main3Activity extends AppCompatActivity {
             Toast.makeText(Main3Activity.this,"Error2:",Toast.LENGTH_LONG).show();
             e.printStackTrace();
         }
-
-
-
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, xRootObject, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response)
@@ -199,9 +189,64 @@ public class Main3Activity extends AppCompatActivity {
             }
         });
         queue2.add(request);
+    }//fin postvolley1
 
 
-    }
+    private void PostVolleyinsert()
+    {
+        final String url = "http://10.1.0.136:81/SapService.svc/xPostEnop";//trabajo
+        //final String url = "http://192.168.0.17:80/CFService/SapService.svc/xPostEnop";//casa
+        Log.d("Post PostVolleyinsert", "entro");
+//x auqi vas
+
+        // Instantiate the RequestQueue.
+        queue2 = Volley.newRequestQueue(this);
+        JSONObject xRootObject = new JSONObject();
+
+        try
+        {
+            //varios resultados
+            xRootObject.put("docnum","1050");
+            xRootObject.put("lotitude","50");
+            xRootObject.put("latitude","10Z");
+
+
+
+        } catch (JSONException e) {
+            Toast.makeText(Main3Activity.this,"Error2:",Toast.LENGTH_LONG).show();
+            e.printStackTrace();
+        }
+
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, xRootObject, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response)
+            {
+                try
+                {
+                    //varios resultados
+                    //mJSONArray=response.getJSONArray("users");
+                    //mJSONObject = mJSONArray.getJSONObject(0);
+                    Log.d("response ", response.toString());
+
+                    Toast.makeText(Main3Activity.this,"PostVolleyinsert result:"+response.getString("response"),Toast.LENGTH_LONG).show();
+                    textView.setText(response.getString("response"));
+
+                } catch (Exception e) {
+                    Toast.makeText(Main3Activity.this,"PostVolleyinsert Error2:",Toast.LENGTH_LONG).show();
+                    e.printStackTrace();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error)
+            {
+                Toast.makeText(Main3Activity.this,"PostVolleyinsert Error3:",Toast.LENGTH_LONG).show();
+
+            }
+        });
+        queue2.add(request);
+    }//fin PostVolleyinsert
 
     //-------------------------------------------------------------------------------------
 }

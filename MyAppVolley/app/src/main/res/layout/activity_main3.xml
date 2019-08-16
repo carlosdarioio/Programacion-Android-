@@ -39,6 +39,12 @@
             android:layout_height="wrap_content"
             android:text="Test post num" />
 
+        <Button
+            android:id="@+id/btnpostwcf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="test insert wcf" />
+
 
     </LinearLayout>
 
