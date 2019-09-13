@@ -1,6 +1,8 @@
 package com.example.scanxxjava.Model;
 
-public class xScanLista {
+import java.io.Serializable;
+
+public class xScanLista implements Serializable {
 private String Codigo;
 
     public String getCodigo() { return Codigo;    }

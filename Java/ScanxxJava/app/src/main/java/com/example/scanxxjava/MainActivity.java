@@ -63,8 +63,12 @@ public class MainActivity extends AppCompatActivity {
     public void TerminarEscaneo(View view) {
 
         Intent intent = new Intent(this, ListarLista.class);
-        intent.putStringArrayListExtra("model",  model);
+        intent.putExtra("model",  model);
         startActivity(intent);
+    }
+
+    public void xPost(View view) {
+        Toast.makeText(this, "Pendientes", Toast.LENGTH_SHORT).show();
     }
 
     //Agregando valor al arrayList y contando ingresados
