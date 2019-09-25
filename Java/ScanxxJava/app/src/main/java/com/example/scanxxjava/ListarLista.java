@@ -26,8 +26,6 @@ public class ListarLista extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_lista);
 
-
-
         //--Obtendiendo Lista mandada por putExtra
         //ArrayList<xScanLista> model = (ArrayList<xScanLista>) getIntent().getSerializableExtra("model");
         ArrayList<xScanLista> model = (ArrayList<xScanLista>) getIntent().getSerializableExtra("model");
@@ -41,7 +39,6 @@ public class ListarLista extends AppCompatActivity {
         m = new xScanLista();
         m.setCodigo("alola tatataranatata ");
         model.add(m);*/
-
 
         //inicializar adapter
         nombresAdapter=new NombreAdapter(this,model);

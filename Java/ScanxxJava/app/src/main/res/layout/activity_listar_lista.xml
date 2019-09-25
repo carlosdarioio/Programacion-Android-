@@ -4,15 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ListarLista">
-
     <ListView
         android:id="@+id/lv_lista"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     </ListView>
-
-
-
 </LinearLayout>
 
 
