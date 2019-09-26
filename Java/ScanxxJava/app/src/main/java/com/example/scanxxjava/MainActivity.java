@@ -19,12 +19,14 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.scanxxjava.Model.ScanJava;
 import com.example.scanxxjava.Model.xScanLista;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -64,11 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-
-
     }
-
-
 
     //Funcion para Mandar lista de escaneo a otra actividad
     public void TerminarEscaneo(View view) {
@@ -77,13 +75,9 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("model",  model);
         startActivity(intent);
     }
-
     public void xPost(View view) {
         Toast.makeText(this, "Pendientes", Toast.LENGTH_SHORT).show();
         PostVolleyinsert("Ataquitoday");
-
-
-
     }
 
     //Agregando valor al arrayList y contando ingresados
@@ -102,24 +96,31 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Funciones alola
      */
-//alola por aqui vas crear servicio que resiviria la clase
-//cambias url y ejecutas aber como insertar
     private void PostVolleyinsert(String doc)
     {
-        final String url = "http://10.1.0.93:81/SapService.svc/xPostScanJava";//trabajo
-        //final String url = "http://192.168.0.17:80/CFService/SapService.svc/xPostEnop";//casa
+        //final String url = "http://10.1.0.93:81/SapService.svc/xPostScanJava";//trabajo
+        final String url = "http://192.168.0.18:80/CFService/SapService.svc/xPostScanJava";//casa xPostScanJava!testPostScanJava
         // Instantiate the RequestQueue.
         queue2 = Volley.newRequestQueue(this);
         JSONObject xRootObject = new JSONObject();
+        //---
+        List<ScanJava> sList = new ArrayList<ScanJava>();
+        ScanJava obj1 = new ScanJava();
+        obj1.setdocnum("val1");
+        sList.add(obj1);
+        ScanJava obj2 = new ScanJava();
+        obj2.setdocnum("val2");
+        sList.add(obj2);
+        //-----
         try
         {
-            xRootObject.put("docnum",doc);
-            xRootObject.put("docnum","papadaosea");
+            xRootObject.put("xRootObject",sList);
+            //xRootObject.put("docnum","papadaosea");
         } catch (JSONException e) {
             Toast.makeText(MainActivity.this,"Error2:",Toast.LENGTH_LONG).show();
             e.printStackTrace();
         }
-        if(doc!="" && doc.length()>6){
+        if(doc!="" && doc.length()>3){
             JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, xRootObject, new Response.Listener<JSONObject>() {
                 @Override
                 public void onResponse(JSONObject response)
@@ -134,8 +135,9 @@ public class MainActivity extends AppCompatActivity {
                         Log.d("response ", response.toString());
 
                         Toast.makeText(MainActivity.this,"result:"+response.getString("response"),Toast.LENGTH_LONG).show();
+                        //Toast.makeText(MainActivity.this,"result:"+response.toString(),Toast.LENGTH_LONG).show();
 
-                        xtxtcount.setText(response.getString("response"));
+                        xtxtcount.setText(response.toString());
 
                     } catch (Exception e) {
                         Toast.makeText(MainActivity.this,"Error2:",Toast.LENGTH_LONG).show();
