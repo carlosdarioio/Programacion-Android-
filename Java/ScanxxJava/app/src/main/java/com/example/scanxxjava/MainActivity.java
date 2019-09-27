@@ -19,13 +19,16 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.scanxxjava.Model.ListScanJava;
 import com.example.scanxxjava.Model.ScanJava;
 import com.example.scanxxjava.Model.xScanLista;
+
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -34,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     TextView xtct,xtxtcount;
     ArrayList<xScanLista> model = new ArrayList<>();
     int count=0;
-    private RequestQueue queue2;
+    private RequestQueue queue2,queue3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,24 +101,30 @@ public class MainActivity extends AppCompatActivity {
      */
     private void PostVolleyinsert(String doc)
     {
-        //final String url = "http://10.1.0.93:81/SapService.svc/xPostScanJava";//trabajo
-        final String url = "http://192.168.0.18:80/CFService/SapService.svc/xPostScanJava";//casa xPostScanJava!testPostScanJava
+        final String url = "http://10.1.0.93:81/SapService.svc/xPostScanJava";//trabajo
+        //final String url = "http://192.168.0.18:80/CFService/SapService.svc/xPostScanJava";//casa xPostScanJava!testPostScanJava
         // Instantiate the RequestQueue.
         queue2 = Volley.newRequestQueue(this);
+        queue3 = Volley.newRequestQueue(this);
         JSONObject xRootObject = new JSONObject();
         //---
-        List<ScanJava> sList = new ArrayList<ScanJava>();
+        ListScanJava sList=new ListScanJava();
+        List<ScanJava> xListScanJ = new ArrayList<ScanJava>();
+
         ScanJava obj1 = new ScanJava();
         obj1.setdocnum("val1");
-        sList.add(obj1);
+        xListScanJ.add(obj1);
         ScanJava obj2 = new ScanJava();
         obj2.setdocnum("val2");
-        sList.add(obj2);
+        xListScanJ.add(obj2);
+
+        //sList.setData(xListScanJ);
+
         //-----
         try
         {
-            xRootObject.put("xRootObject",sList);
-            //xRootObject.put("docnum","papadaosea");
+            //xRootObject.put("ScanJava",obj2);//ScanJava--xRootObject
+            xRootObject.put("docnum","papadaosea");
         } catch (JSONException e) {
             Toast.makeText(MainActivity.this,"Error2:",Toast.LENGTH_LONG).show();
             e.printStackTrace();
