@@ -1,11 +1,17 @@
 package com.example.scanxxjava.Model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 
 public class xScanLista implements Serializable {
+
+    @SerializedName("Codigo")
+    @Expose
 private String Codigo;
 
     public String getCodigo() { return Codigo;    }
 
-    public void setCodigo(String codigo) {  Codigo = codigo;    }
+    public void setCodigo(String Codigo) {  this.Codigo = Codigo;    }
 }

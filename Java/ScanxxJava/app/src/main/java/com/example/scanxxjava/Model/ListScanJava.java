@@ -1,16 +1,22 @@
 package com.example.scanxxjava.Model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
 import java.util.List;
 
-public class ListScanJava {
+public class ListScanJava implements Serializable {
 
-    private List<ScanJava> xRootObject = null;
+    @SerializedName("xRootObject")
+    @Expose
+    private List<ScanJava> scanJava = null;
 
-    public List<ScanJava> getData() {
-        return xRootObject;
+    public List<ScanJava> getScanJava() {
+        return scanJava;
     }
-    public void setData(List<ScanJava> data) {
-        this.xRootObject = data;
+    public void setScanJava(List<ScanJava> scanJava) {
+        this.scanJava = scanJava;
     }
 }
 /*public class zScanJava {
