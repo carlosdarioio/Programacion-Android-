@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".DasdBoard">
+
+    <LinearLayout
+        android:id="@+id/layutder"
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnMenu"
+            style="@android:style/Widget.DeviceDefault.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/colorPrimaryDark"
+            android:drawableBottom="@android:drawable/stat_notify_more"
+            android:foregroundGravity="center"
+            android:gravity="top|left"
+            android:onClick="Menu"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="317dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:text="Dasboard"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Operarios"
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:drawableBottom="@android:drawable/arrow_down_float"
+        android:text="Operarios"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    <TextView
+        android:id="@+id/Presu"
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:layout_weight="1"
+        android:text="Presupuestos"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    <TextView
+        android:id="@+id/Ordenes"
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:layout_weight="1"
+        android:text="Ordenes"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal"></LinearLayout>
+</LinearLayout>

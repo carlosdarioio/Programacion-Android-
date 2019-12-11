@@ -27,9 +27,9 @@ public class MainActivity extends AppCompatActivity {
         btnEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    Intent intent=new Intent(MainActivity.this,MenuInicial.class);
+                    Intent intent=new Intent(MainActivity.this,DasdBoard.class);
                     startActivity(intent);
-                    finish();
+
             }
         });
 
