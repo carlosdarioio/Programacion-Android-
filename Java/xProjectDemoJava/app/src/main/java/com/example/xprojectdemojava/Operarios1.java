@@ -12,16 +12,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-//Pagina inicial despues del loggin para visualizar informacion general
-public class DasdBoard extends AppCompatActivity {
+public class Operarios1 extends AppCompatActivity {
 
     Button btnMenu;
-    TextView txtxOpe;
-
+    TextView opera1,opera2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dasd_board);
+        setContentView(R.layout.activity_operarios1);
 
         //Accion para mostar menu
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -34,36 +32,40 @@ public class DasdBoard extends AppCompatActivity {
             //Desactivas la opcion de volver atras
             //actionBar.setDisplayHomeAsUpEnabled(true);
         }
-
-
-
-
         btnMenu=findViewById(R.id.btnMenu);
 
         btnMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(DasdBoard.this,xMenu.class);
+                Intent intent=new Intent(Operarios1.this,xMenu.class);
                 startActivity(intent);
 
             }
         });
 
-        txtxOpe= findViewById(R.id.txtxOpe);
+        opera1= findViewById(R.id.Operarios1);
 
-        txtxOpe.setOnClickListener(new View.OnClickListener() {
+        opera1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(DasdBoard.this,Operarios1.class);
+                Intent intent=new Intent(Operarios1.this,OperariosView1Demo.class);
                 startActivity(intent);
 
             }
         });
 
+        opera2= findViewById(R.id.Operarios2);
 
+        opera2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Operarios1.this,OperariosView2Demo.class);
+                startActivity(intent);
 
-
+            }
+        });
     }
+
 
     //--------------------------------
     @Override
@@ -85,7 +87,7 @@ public class DasdBoard extends AppCompatActivity {
         }
 
         if (id == R.id.action_favorite) {
-            Intent intent=new Intent(DasdBoard.this,xMenu.class);
+            Intent intent=new Intent(Operarios1.this,xMenu.class);
             startActivity(intent);
             return true;
         }
@@ -94,4 +96,4 @@ public class DasdBoard extends AppCompatActivity {
     }
     //------------------
 
-}//Fin dasboard
+}//Fin Operarios1

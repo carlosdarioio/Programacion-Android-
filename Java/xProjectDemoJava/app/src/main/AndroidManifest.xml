@@ -9,14 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".Reportes"></activity>
+        <activity android:name=".OperariosView2Demo"></activity>
+        <activity android:name=".OperariosView1Demo" />
+        <activity android:name=".Operarios1" />
+        <activity android:name=".Reportes" />
         <activity android:name=".xMenu" />
-        <activity android:name=".DasdBoard"         >
+        <activity android:name=".DasdBoard">
+
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.xprojectdemojava.xMenu" />
-
         </activity>
         <activity android:name=".DetallesActivity" />
         <activity android:name=".MenuInicial" />

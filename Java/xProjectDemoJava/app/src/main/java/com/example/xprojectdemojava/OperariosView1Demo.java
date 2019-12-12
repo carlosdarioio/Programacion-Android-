@@ -10,18 +10,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
-//Pagina inicial despues del loggin para visualizar informacion general
-public class DasdBoard extends AppCompatActivity {
-
+public class OperariosView1Demo extends AppCompatActivity {
+//clase solo para ver el formato general de las paginas
     Button btnMenu;
-    TextView txtxOpe;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dasd_board);
+        setContentView(R.layout.activity_operarios_view1_demo);
 
         //Accion para mostar menu
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -35,37 +31,21 @@ public class DasdBoard extends AppCompatActivity {
             //actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
-
-
-
         btnMenu=findViewById(R.id.btnMenu);
 
         btnMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(DasdBoard.this,xMenu.class);
+                Intent intent=new Intent(OperariosView1Demo.this,xMenu.class);
                 startActivity(intent);
 
             }
         });
 
-        txtxOpe= findViewById(R.id.txtxOpe);
-
-        txtxOpe.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(DasdBoard.this,Operarios1.class);
-                startActivity(intent);
-
-            }
-        });
+    }//fIN Oncreate
 
 
-
-
-    }
-
-    //--------------------------------
+    //--------------------------------MENUUUUUUUU
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -85,7 +65,7 @@ public class DasdBoard extends AppCompatActivity {
         }
 
         if (id == R.id.action_favorite) {
-            Intent intent=new Intent(DasdBoard.this,xMenu.class);
+            Intent intent=new Intent(OperariosView1Demo.this,xMenu.class);
             startActivity(intent);
             return true;
         }
@@ -94,4 +74,4 @@ public class DasdBoard extends AppCompatActivity {
     }
     //------------------
 
-}//Fin dasboard
+}//Fin OperariosView1Demo

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#E9E6E6"
     android:orientation="vertical"
-    tools:context=".DasdBoard">
+    tools:context=".OperariosView1Demo">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -61,32 +61,14 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/txtxOpe"
+            android:id="@+id/xOperarios1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:background="@drawable/dotted"
-            android:text="Operarios"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-
-        <TextView
-            android:id="@+id/Presu"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:background="@drawable/dotted"
-            android:text="Presupuestos"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-
-        <TextView
-            android:id="@+id/Ordenes"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:background="@drawable/dotted"
-
-            android:text="Ordenes"
+            android:text="Operarios1"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     </LinearLayout>
 </LinearLayout>
+

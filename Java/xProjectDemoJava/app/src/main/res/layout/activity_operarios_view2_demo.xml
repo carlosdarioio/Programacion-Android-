@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#E9E6E6"
     android:orientation="vertical"
-    tools:context=".DasdBoard">
+    tools:context=".OperariosView2Demo">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -61,32 +61,73 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/txtxOpe"
+            android:id="@+id/xOperarios2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:text="Operarios2 TextBoxt Solo"
             android:layout_margin="10dp"
             android:background="@drawable/dotted"
-            android:text="Operarios"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <TextView
-            android:id="@+id/Presu"
+            android:id="@+id/textViewTema"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tema"
             android:layout_margin="10dp"
             android:background="@drawable/dotted"
-            android:text="Presupuestos"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            />
         <TextView
-            android:id="@+id/Ordenes"
+            android:id="@+id/textViewSubTema"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SubTema"
+            android:layout_margin="5dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Large"
+            />
+
+        <EditText
+        android:id="@+id/Descripcion"
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="8"
+        android:minLines="6"
+        android:gravity="top|left"
+        android:maxLines="10"
+        android:scrollbars="vertical"
+            android:hint="Descripicon"
+            android:background="@drawable/dotted"
+            android:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Large"
+
+        />
+
+        <Button
+            android:id="@+id/btnBoton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="10dp"
+            android:layout_weight="1"
             android:background="@drawable/dotted"
+            android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button"
+            android:text="Button" />
 
-            android:text="Ordenes"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        <Spinner
+            android:id="@+id/spinner_Select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="hint" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
 </LinearLayout>
+
