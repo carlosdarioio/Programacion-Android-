@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".xMenu"
+>
+
+
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".xMenu">
+    >
 
     <LinearLayout
         android:id="@+id/layutder"
+        style="@style/VerticalThemeLayoutInputs"
         android:layout_width="match_parent"
         android:layout_height="150px"
         android:background="@color/colorPrimaryDark"
-        android:orientation="horizontal">
+        android:dividerPadding="12dip"
+        android:orientation="horizontal"
+        android:showDividers="middle">
 
         <Button
             android:id="@+id/btnMenu"
@@ -20,108 +34,55 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="@color/colorPrimaryDark"
-            android:drawableBottom="@android:drawable/stat_notify_more"
-            android:foregroundGravity="center"
-            android:gravity="top|left"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+            android:background="@color/colorPrimaryDark" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="317dp"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimaryDark"
-            android:text="Menu"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+            android:text="Menu" />
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/Operarios"
-        android:layout_width="match_parent"
-        android:layout_height="150px"
-        android:drawableLeft="@mipmap/ic_launcher_round"
-        android:drawableBottom="@android:drawable/arrow_down_float"
-        android:text="Actividades"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
-    <TextView
-        android:id="@+id/Presu"
-        android:layout_width="match_parent"
-        android:layout_height="150px"
-        android:layout_weight="1"
-        android:drawableLeft="@mipmap/ic_launcher_round"
-        android:text="Parcelas"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        <TextView
+            android:id="@+id/xReportezs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@android:drawable/ic_menu_call"
+            android:text="Actividades"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    <TextView
-        android:id="@+id/Ordenes"
-        android:layout_width="match_parent"
-        android:layout_height="150px"
-        android:layout_weight="1"
-        android:drawableLeft="@mipmap/ic_launcher_round"
-        android:text="Inventario"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
-    <TextView
-        android:id="@+id/btnMenuReports"
-        android:layout_width="match_parent"
-        android:layout_height="150px"
-        android:layout_weight="1"
-        android:drawableLeft="@mipmap/ic_launcher_round"
-        android:text="Reportes"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        <TextView
+            android:id="@+id/xReportes1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@android:drawable/ic_lock_power_off"
+            android:text="Parcelas"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    <TextView
-        android:id="@+id/btnMenuPresupuestos"
-        android:layout_width="match_parent"
-        android:layout_height="150px"
-        android:layout_weight="1"
-        android:drawableLeft="@mipmap/ic_launcher_round"
-        android:text="Presupuestos"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
-    <TextView
-        android:id="@+id/btnMenuMaquinaria"
-        android:layout_width="match_parent"
-        android:layout_height="150px"
-        android:layout_weight="1"
-        android:drawableLeft="@mipmap/ic_launcher_round"
-        android:text="Maquinaria"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
-    <TextView
-        android:id="@+id/btnMenuCosecha"
-        android:layout_width="match_parent"
-        android:layout_height="150px"
-        android:layout_weight="1"
-        android:drawableLeft="@mipmap/ic_launcher_round"
-        android:text="Cosecha"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
-    <TextView
-        android:id="@+id/btnMenuFinan"
-        android:layout_width="match_parent"
-        android:layout_height="150px"
-        android:layout_weight="1"
-        android:drawableLeft="@mipmap/ic_launcher_round"
-        android:text="Financiero"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        <TextView
+            android:id="@+id/xReportes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@android:drawable/ic_btn_speak_now"
+            android:text="Reposts"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    <TextView
-        android:id="@+id/btnMenuConfigu"
-        android:layout_width="match_parent"
-        android:layout_height="150px"
-        android:layout_weight="1"
-        android:drawableLeft="@mipmap/ic_launcher_round"
-        android:text="Configuracion"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal"></LinearLayout>
+
+
+
+
+
+
+
 </LinearLayout>
 
 
+</androidx.core.widget.NestedScrollView>
