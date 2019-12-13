@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btBuscaFactura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buscar Factura" />
+
+        <Button
+            android:id="@+id/btnEstadoGuia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estado de Guia" />
+
+        <Button
+            android:id="@+id/btnBuscarZona"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buscar Zona" />
+
+        <Button
+            android:id="@+id/btnZonaXDep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Zona X Departamento" />
+
+    </LinearLayout>
+
+</LinearLayout>
