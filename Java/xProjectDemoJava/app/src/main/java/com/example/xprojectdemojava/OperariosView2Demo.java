@@ -131,7 +131,7 @@ public class OperariosView2Demo extends AppCompatActivity {
         }
 
         if (id == R.id.action_favorite) {
-            Intent intent=new Intent(OperariosView2Demo.this,xMenu.class);
+            Intent intent=new Intent(OperariosView2Demo.this,MenuPrincipal.class);
             startActivity(intent);
             return true;
         }

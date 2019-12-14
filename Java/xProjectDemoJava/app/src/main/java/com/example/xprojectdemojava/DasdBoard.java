@@ -43,7 +43,7 @@ public class DasdBoard extends AppCompatActivity {
         btnMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(DasdBoard.this,xMenu.class);
+                Intent intent=new Intent(DasdBoard.this,MenuPrincipal.class);
                 startActivity(intent);
 
             }

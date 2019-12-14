@@ -37,7 +37,7 @@ public class Operarios1 extends AppCompatActivity {
         btnMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Operarios1.this,xMenu.class);
+                Intent intent=new Intent(Operarios1.this,MenuPrincipal.class);
                 startActivity(intent);
 
             }
@@ -87,7 +87,7 @@ public class Operarios1 extends AppCompatActivity {
         }
 
         if (id == R.id.action_favorite) {
-            Intent intent=new Intent(Operarios1.this,xMenu.class);
+            Intent intent=new Intent(Operarios1.this,MenuPrincipal.class);
             startActivity(intent);
             return true;
         }
