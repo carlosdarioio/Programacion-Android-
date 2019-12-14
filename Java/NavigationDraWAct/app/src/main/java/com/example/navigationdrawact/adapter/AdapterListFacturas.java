@@ -8,7 +8,6 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.navigationdrawact.JsonClass.Factura;
-import com.example.navigationdrawact.JsonClass.FindFacturaList;
 import com.example.navigationdrawact.R;
 
 import java.util.ArrayList;

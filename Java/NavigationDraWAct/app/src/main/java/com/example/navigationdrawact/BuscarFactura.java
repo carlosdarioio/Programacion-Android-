@@ -2,6 +2,7 @@ package com.example.navigationdrawact;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -32,8 +33,8 @@ public class BuscarFactura extends AppCompatActivity {
     TextView txtError;
     Button btnBuscar;
     EditText EditNumFactura;
-    private ListView lista;
-    private AdapterListFacturas nombresAdapter;
+    FindFacturaList xListFacturas;
+
 
 
     @Override
@@ -56,7 +57,9 @@ public class BuscarFactura extends AppCompatActivity {
 
 
 
-    }
+
+
+    }//Fin on create
 
 
 
@@ -84,29 +87,9 @@ public class BuscarFactura extends AppCompatActivity {
                     {
                         txtError.setText("Con Resultados "+xListFacturas.getFacturas().get(0).getFACTURA());
                         Log.d("Get x ",xListFacturas.getFacturas().get(0).getFACTURA());//
-
-
-                        //======================================
-                        //inicializar adapter
-                        ArrayList<Factura> model =  (ArrayList)xListFacturas.getFacturas();//(ArrayList<Factura>) getIntent().getSerializableExtra("model");
-                        nombresAdapter=new AdapterListFacturas(BuscarFactura.this,model);
-
-                        lista=(ListView)findViewById(R.id.listafacturas);//agregar adaptador en lista
-                        lista.setAdapter(nombresAdapter);
-
-                        //mostrando texto seleccionaod por cada clicik que da
-                        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                            @Override
-                            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                                Factura mScanLista=(Factura)nombresAdapter.getItem(position);
-                                Toast.makeText(getBaseContext(),"Tu Factura es "+mScanLista.getFACTURA(), Toast.LENGTH_LONG).show();
-                                //pones sartactivity desde aqui
-                                //startActivity(DetallerActivity.getCallingIntent(context,mDetalles));
-
-
-                            }
-                        });//Find lista.setOnItemClickListener
-                        //=====================================
+                        Intent intent = new Intent(BuscarFactura.this, ListarFacturas.class);
+                        intent.putExtra("model",  xListFacturas);
+                        startActivity(intent);
                     }
                     else
                     {

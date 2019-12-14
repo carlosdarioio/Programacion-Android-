@@ -1,11 +1,12 @@
 
 package com.example.navigationdrawact.JsonClass;
 
+import java.io.Serializable;
 import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class FindFacturaList {
+public class FindFacturaList implements Serializable {
 
     @SerializedName("status")
     @Expose
@@ -13,6 +14,7 @@ public class FindFacturaList {
     @SerializedName("message")
     @Expose
     private String message;
+    //
     @SerializedName("Facturas")
     @Expose
     private List<Factura> facturas = null;

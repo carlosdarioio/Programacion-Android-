@@ -4,7 +4,9 @@ package com.example.navigationdrawact.JsonClass;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Factura {
+import java.io.Serializable;
+
+public class Factura  implements Serializable {
 
     @SerializedName("Tipo")
     @Expose
