@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     android:background="#E9E6E6"
     android:orientation="vertical"
-    tools:context=".OperariosView2Demo">
+    tools:context=".ActividadesCrear"
+    >
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +17,7 @@
 
 
         <LinearLayout
-            android:id="@+id/layutder"
+            android:id="@+id/crearlayutder"
             android:layout_width="match_parent"
             android:layout_height="150px"
             android:background="@color/colorPrimaryDark"
@@ -46,7 +48,6 @@
                 android:drawableBottom="@android:drawable/stat_notify_more"
                 android:foregroundGravity="center"
                 android:gravity="top|left"
-                android:onClick="Menu"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
             <Button
@@ -64,79 +65,27 @@
             android:id="@+id/ActVerTema"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Operarios2 TextBoxt Solo"
+            android:text="Creando Actividad"
             android:layout_margin="10dp"
             android:background="@drawable/dotted"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-        <TextView
-            android:id="@+id/textViewTema"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tema"
-            android:layout_margin="10dp"
-            android:background="@drawable/dotted"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            />
-        <TextView
-            android:id="@+id/textViewSubTema"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="SubTema"
-            android:layout_margin="5dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Large"
-            />
-
         <EditText
-        android:id="@+id/Descripcion"
-        android:inputType="textMultiLine"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:lines="8"
-        android:minLines="6"
-        android:maxLines="10"
-        android:scrollbars="vertical"
-            android:hint="Descripicon"
-            android:background="@drawable/dotted"
-            android:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Large"
-
-        />
+            android:id="@+id/ActCrearNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Nombre de la Actividad" />
 
         <Button
-            android:id="@+id/btnBoton"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/dotted"
-            android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button"
-            android:text="Button" />
-
-        <Spinner
-            android:id="@+id/spinner_Select"
+            android:id="@+id/btnActividadesCrear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/dotted"
-            android:textAppearance="@style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem"
-            />
-        <Spinner
-            android:id="@+id/spinner_Select2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/dotted"
-            android:textAppearance="@style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem"
-            />
+            android:text="Crear" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="hint" />
-
-        </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
 </LinearLayout>
+
 

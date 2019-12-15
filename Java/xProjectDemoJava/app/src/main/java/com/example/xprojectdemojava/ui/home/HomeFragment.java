@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.xprojectdemojava.Actividades1;
 import com.example.xprojectdemojava.DasdBoard;
 import com.example.xprojectdemojava.Operarios1;
 import com.example.xprojectdemojava.R;
@@ -21,7 +22,7 @@ import com.example.xprojectdemojava.R;
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
-    Button btnActividades;
+    Button btnActividades,button5;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -41,6 +42,19 @@ public class HomeFragment extends Fragment {
         //te detesniste aqui pa confirmar si el menu se abre
         btnActividades=root.findViewById(R.id.btnActividades);
         btnActividades.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(), Actividades1.class);
+                startActivity(intent);
+
+            }
+        });
+
+
+
+        //firmatos de form que empezaste asiendo
+        button5=root.findViewById(R.id.button5);
+        button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getActivity(), Operarios1.class);

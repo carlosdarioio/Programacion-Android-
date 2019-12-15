@@ -1,7 +1,5 @@
 package com.example.xprojectdemojava;
-//NOTA
-//No tocar este se como como formato general
-// pa copiar y pegar en todo el que creees
+
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -13,13 +11,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-public class OperariosView1Demo extends AppCompatActivity {
-//clase solo para ver el formato general de las paginas
-    Button btnMenu;
+public class ActividadesCrear extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_operarios_view1_demo);
+        setContentView(R.layout.activity_actividades_crear);
 
         //Accion para mostar menu
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -33,19 +30,18 @@ public class OperariosView1Demo extends AppCompatActivity {
             //actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
-        btnMenu=findViewById(R.id.btnMenu);
+        Button btnMenu=findViewById(R.id.btnMenu);
 
         btnMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(OperariosView1Demo.this,MenuPrincipal.class);
+                Intent intent=new Intent(getBaseContext(),xMenu.class);
                 startActivity(intent);
 
             }
         });
-
-    }//fIN Oncreate
-
+        //Tema
+    }
 
     //--------------------------------MENUUUUUUUU
     @Override
@@ -67,7 +63,7 @@ public class OperariosView1Demo extends AppCompatActivity {
         }
 
         if (id == R.id.action_favorite) {
-            Intent intent=new Intent(OperariosView1Demo.this,MenuPrincipal.class);
+            Intent intent=new Intent(getBaseContext(),MenuPrincipal.class);
             startActivity(intent);
             return true;
         }
@@ -75,5 +71,4 @@ public class OperariosView1Demo extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     //------------------
-
-}//Fin OperariosView1Demo
+}
