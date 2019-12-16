@@ -85,7 +85,7 @@ public class BuscarFactura extends AppCompatActivity {
                     //Log.d("GetListClass response ", response.toString());
                     if(!xListFacturas.getFacturas().get(0).getFACTURA().isEmpty())
                     {
-                        txtError.setText("Con Resultados "+xListFacturas.getFacturas().get(0).getFACTURA());
+                        txtError.setText(EditNumFactura.getText()+" tuvo "+xListFacturas.getFacturas().size()+" Resultados ");
                         Log.d("Get x ",xListFacturas.getFacturas().get(0).getFACTURA());//
                         Intent intent = new Intent(BuscarFactura.this, ListarFacturas.class);
                         intent.putExtra("model",  xListFacturas);

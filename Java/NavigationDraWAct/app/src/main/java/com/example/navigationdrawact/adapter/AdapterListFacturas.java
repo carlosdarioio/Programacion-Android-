@@ -1,6 +1,7 @@
 package com.example.navigationdrawact.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.navigationdrawact.JsonClass.Factura;
 import com.example.navigationdrawact.R;
+import com.example.navigationdrawact.VerFactura;
 
 import java.util.ArrayList;
 
@@ -39,7 +41,7 @@ public class AdapterListFacturas extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, final ViewGroup parent) {
 
         if(convertView==null)
         {
@@ -50,7 +52,24 @@ public class AdapterListFacturas extends BaseAdapter {
 
         TextView xscaneado = (TextView)convertView.findViewById(R.id.itemfactura);
         //asignando valores
-        xscaneado.setText(arrayList.get(position).getFACTURA());
+        xscaneado.setText(arrayList.get(position).getFACTURA()+" "+arrayList.get(position).getCliente()+" "+arrayList.get(position).getFecha());
+
+        //Onclick Action-------------------------------------------------------------
+        xscaneado.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), VerFactura.class);
+                //Asignando datos de factura a pasar
+                intent.putExtra("model",  arrayList.get(position));
+                v.getContext().startActivity(intent);
+            }
+        });
+        //Fin Onclick Action---------------------------------------------------------
+
+
+
+
+
+
         return convertView;
-    }
+    }//Fin View Adapter
 }

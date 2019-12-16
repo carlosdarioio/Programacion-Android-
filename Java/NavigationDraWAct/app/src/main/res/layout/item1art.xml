@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <!--select ''[Articulo],''[Descripcion],''[Cantidad],''[Venta],''[Almacen]-->
+    <TextView
+        android:id="@+id/Articulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:fontFamily="monospace"
+        android:paddingVertical="15dp"
+        android:paddingBottom="15dp"
+
+        />
+    <TextView
+        android:id="@+id/Descripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:fontFamily="monospace"
+        android:paddingVertical="15dp"
+        android:paddingBottom="15dp"
+
+        />
+    <TextView
+        android:id="@+id/Cantidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:fontFamily="monospace"
+        android:paddingVertical="15dp"
+        android:paddingBottom="15dp"
+
+        />
+    <TextView
+        android:id="@+id/Almacen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:fontFamily="monospace"
+        android:paddingVertical="15dp"
+        android:paddingBottom="15dp"
+
+        />
+    <TextView
+        android:id="@+id/Venta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:fontFamily="monospace"
+        android:paddingVertical="15dp"
+        android:paddingBottom="15dp"
+
+        />
+</LinearLayout>
