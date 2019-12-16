@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ActividadesCrear"></activity>
+        <activity android:name=".Parcelas"></activity>
+        <activity android:name=".ActividadesCrear" />
         <activity android:name=".Actividades1Ver" />
         <activity android:name=".Actividades1" />
         <activity

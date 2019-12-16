@@ -13,5 +13,5 @@
     <string name="menu_slideshow">Inventario</string>
     <string name="menu_tools">Presupuestos</string>
     <string name="menu_share">Cosecha</string>
-    <string name="menu_send">Financiero</string>
+    <string name="menu_send">Configuracion General</string>
 </resources>

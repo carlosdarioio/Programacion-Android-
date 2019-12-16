@@ -1,5 +1,5 @@
 package com.example.xprojectdemojava.ui.slideshow;
-
+//menu_slideshow es inventario
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;

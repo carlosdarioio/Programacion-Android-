@@ -1,5 +1,5 @@
 package com.example.xprojectdemojava.ui.send;
-
+//send es Configuracion General
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;

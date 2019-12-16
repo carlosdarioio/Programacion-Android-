@@ -74,8 +74,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/dotted"
             android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button"
+            android:background="#89DF8B"
             android:text="Crear" />
 
         <ListView

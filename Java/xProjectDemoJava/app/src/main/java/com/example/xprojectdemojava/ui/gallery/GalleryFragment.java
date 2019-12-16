@@ -1,5 +1,5 @@
 package com.example.xprojectdemojava.ui.gallery;
-
+//galery es parcelas
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;

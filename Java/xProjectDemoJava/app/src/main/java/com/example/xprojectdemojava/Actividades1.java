@@ -71,11 +71,15 @@ public class Actividades1 extends AppCompatActivity {
 
         ArrayList<ModelListaActividades> model=new ArrayList<>();
         ModelListaActividades m = new ModelListaActividades();
-        m.setCodigo("un dia duarlo con sentire me ");
+        m.setCodigo("Control Suelos ");
         model.add(m);
 
         m = new ModelListaActividades();
-        m.setCodigo("alola tatataranatata ");
+        m.setCodigo("Cortes ");
+        model.add(m);
+
+        m = new ModelListaActividades();
+        m.setCodigo("Establecimiento Plantas ");
         model.add(m);
 
         //inicializar adapter

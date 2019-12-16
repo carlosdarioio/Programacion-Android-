@@ -1,5 +1,5 @@
 package com.example.xprojectdemojava.ui.share;
-
+//share es cosecha
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -10,7 +10,7 @@ public class ShareViewModel extends ViewModel {
 
     public ShareViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is share fragment");
+        mText.setValue("Cosechas");
     }
 
     public LiveData<String> getText() {

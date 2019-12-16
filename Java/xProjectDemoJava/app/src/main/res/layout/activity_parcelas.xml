@@ -6,9 +6,8 @@
     android:layout_height="match_parent"
     android:background="#E9E6E6"
     android:orientation="vertical"
-    tools:context=".ActividadesCrear"
+    tools:context=".Parcelas"
     >
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +16,7 @@
 
 
         <LinearLayout
-            android:id="@+id/crearlayutder"
+            android:id="@+id/laypars"
             android:layout_width="match_parent"
             android:layout_height="150px"
             android:background="@color/colorPrimaryDark"
@@ -55,38 +54,38 @@
                 android:layout_width="317dp"
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimaryDark"
-                android:text="Dasboard"
+                android:text="nopDasboard"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
 
         </LinearLayout>
 
         <TextView
-            android:id="@+id/ActVerTema"
+            android:id="@+id/parTema"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Creando Actividad"
             android:layout_margin="10dp"
             android:background="@drawable/dotted"
+            android:text="Parcelas"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-        <EditText
-            android:id="@+id/ActCrearNombre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Nombre de la Actividad" />
-
         <Button
-            android:id="@+id/btnActividadesCrear"
+            android:id="@+id/patbtnCrear"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button"
             android:background="#89DF8B"
             android:text="Crear" />
 
+        <ListView
+            android:id="@+id/lista_actividades"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
 
     </LinearLayout>
 </LinearLayout>
+
 
 
