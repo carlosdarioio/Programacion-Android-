@@ -18,7 +18,6 @@ import com.android.volley.toolbox.Volley;
 import com.example.navigationdrawact.JsonClass.Articulo;
 import com.example.navigationdrawact.JsonClass.Factura;
 import com.example.navigationdrawact.JsonClass.FindArtxFacturaList;
-import com.example.navigationdrawact.JsonClass.FindFacturaList;
 import com.example.navigationdrawact.adapter.AdapterListArtFactura;
 import com.example.navigationdrawact.adapter.AdapterListFacturas;
 import com.google.gson.Gson;
@@ -28,21 +27,26 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 public class VerFactura extends AppCompatActivity {
-    private RequestQueue queueFindFactura;
+    private RequestQueue queueFindArt;
     private ListView lista;
-    private AdapterListArtFactura nombresAdapter;
-    TextView txtError;
+    private AdapterListArtFactura Adapterart;
+    TextView txtErrorart;
     Factura model;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_factura);
+        txtErrorart=findViewById(R.id.txtError);
         model = (Factura) getIntent().getSerializableExtra("model");
         Toast.makeText(getBaseContext(),"Factura "+model.getFACTURA(), Toast.LENGTH_LONG).show();
         Toast.makeText(getBaseContext(),"Cl "+model.getCliente(), Toast.LENGTH_LONG).show();
         Toast.makeText(getBaseContext(),"fecha "+model.getFecha(), Toast.LENGTH_LONG).show();
+        Log.d("GetArtFacturasVolley "," start adapter ");//
         GetArtFacturasVolley();
+        Log.d("GetArtFacturasVolley "," end adapter99 ");//
+
 
 
     }//Fin oncreate
@@ -52,45 +56,41 @@ public class VerFactura extends AppCompatActivity {
 
     private void GetArtFacturasVolley()
     {
-        queueFindFactura = Volley.newRequestQueue(this);
-        //http://10.1.201.5/DXInvIT/SapService.svc/FindArtxFactura/1010179306
+        queueFindArt = Volley.newRequestQueue(this);
+        //http://10.1.201.5/DXInvIT/SapService.svc/FindArtxFactura/1350202020
         String url="http://10.1.201.5/DXInvIT/SapService.svc/FindArtxFactura/"+model.getFACTURA(); //Trabajo
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>()
+        {
             @Override
             public void onResponse(JSONObject response)
             {
                 try
                 {
+
                     Gson gson = new Gson();
-                    FindArtxFacturaList xListArticulos = gson.fromJson(response.toString(), FindArtxFacturaList.class); //response.toString() o txt
-                    if(!xListArticulos.getArticulos().get(0).getDescripcion().isEmpty())
+                    FindArtxFacturaList xListArt = gson.fromJson(response.toString(), FindArtxFacturaList.class); //response.toString() o txt
+                    //txtError.setText("GetListClassVolley R: "+response.toString());
+                    Log.d("xListArt1 ", xListArt.getMessage());
+                    if(!xListArt.getArticulos().get(0).getArticulo().isEmpty())
                     {
-                        txtError.setText(model.getFACTURA()+" tuvo "+xListArticulos.getArticulos().size()+" Resultados ");
-                        Log.d("Get x ",xListArticulos.getArticulos().get(0).getDescripcion());//
-
-
-                        //------------Mostrando articulos
-                        ArrayList<Articulo> modelArt = (ArrayList<Articulo>) xListArticulos.getArticulos();
-                        Log.d("Get model2 ","antes de adapter");//
-
-                        nombresAdapter=new AdapterListArtFactura(VerFactura.this,modelArt);
-                        Log.d("Get model3 "," despues de adapter");//
-                        //por aqui vas comprobar si funciona y se ven los datos
-                        //pasar de ListView a LinearLayout
-                        lista=(ListView)findViewById(R.id.lista_art_de_facturas);//agregar adaptador en lista
-                        lista.setAdapter(nombresAdapter);
-                        Log.d("Get model4 "," despues de lista");//
-
-                        //------------------Fin moftrando artoculos
+                        txtErrorart.setText(model.getFACTURA()+" tiene "+xListArt.getArticulos().size()+" Resultados ");
+                        Log.d("VF1 ",xListArt.getArticulos().get(0).getArticulo());//
+                        //por aqui vas pendiente crear lista de articulos que asignaras al
+                        //todo este rato trabado... quitar ' y "" de la descricion xd
+                        //corregiste el servidor pendiente aser prueba
+                        Adapterart=new AdapterListArtFactura(VerFactura.this,(ArrayList<Articulo>)xListArt.getArticulos());
+                        lista=(ListView)findViewById(R.id.listafacturas);//agregar adaptador en lista
+                        lista.setAdapter(Adapterart);
+                        //---------------------
                     }
                     else
                     {
-                        Log.d("Get z ",xListArticulos.getArticulos().get(0).getAlmacen());//
-                        txtError.setText("Sin Resultados "+xListArticulos.getArticulos().get(0).getCantidad()+" xx");
+                        Log.d("VF x ","...");//
+                        txtErrorart.setText("Sin Resultados "+xListArt.getArticulos().get(0).getArticulo()+" xx");
                     }
 
                 } catch (Exception e) {
-                    txtError.setText("e1 "+e.getMessage());
+                    txtErrorart.setText("v1 "+e.getMessage());
                     e.printStackTrace();
                 }
             }
@@ -98,12 +98,15 @@ public class VerFactura extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error)
             {
-                txtError.setText("E2 "+error.getMessage().toString());
+                txtErrorart.setText("fE9 "+error.getMessage().toString());
             }
         });
-        queueFindFactura.add(request);
-    }
+        queueFindArt.add(request);
+    }//fin GetArt
+    }//fin verfactu
     //------------------------------------------------------------------------------------
 
-//Fin VerFacturas
- }
+
+
+
+

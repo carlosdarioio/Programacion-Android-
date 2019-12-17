@@ -43,19 +43,11 @@
             android:textSize="24sp"
             android:text="CL-CLiente" />
 
-        <!--por aqui vas creando la lista dond e visualizaran los datos de la factura como ser
-            COdigo - Nombre de Art- Almacen - cantidad - venta
-            NOTA: de pref mira como poner el gridview en vez de ListView
-            id lista_art_de_facturas-->
-
         <ListView
             android:id="@+id/lista_art_de_facturas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
         </ListView>
-
-
-
 
         <Button
             android:text="Buscar"
