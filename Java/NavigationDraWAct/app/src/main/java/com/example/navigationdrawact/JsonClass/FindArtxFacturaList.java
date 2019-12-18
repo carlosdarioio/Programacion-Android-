@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
+//se quito de VerFactura... intentaste y no pudiste mostrra los articuslo sde factura
 public class FindArtxFacturaList implements Serializable {
 
     @SerializedName("status")

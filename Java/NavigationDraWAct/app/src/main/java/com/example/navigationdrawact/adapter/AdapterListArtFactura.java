@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.example.navigationdrawact.JsonClass.Articulo;
 import com.example.navigationdrawact.R;
 
-
+//se quito de VerFactura... intentaste y no pudiste mostrra los articuslo sde factura
 import java.util.ArrayList;
 
 public class AdapterListArtFactura extends BaseAdapter{
@@ -55,11 +55,11 @@ public class AdapterListArtFactura extends BaseAdapter{
         TextView Venta = (TextView)convertView.findViewById(R.id.Venta);
         TextView Almacen = (TextView)convertView.findViewById(R.id.Almacen);
         //asignando valores
-        Articulo.setText(arrayList.get(position).getArticulo().toString());
-        Descripcion.setText(arrayList.get(position).getDescripcion().toString());
-        Cantidad.setText(arrayList.get(position).getCantidad().toString());
-        Venta.setText(arrayList.get(position).getVenta().toString());
-        Almacen.setText(arrayList.get(position).getAlmacen().toString());
+        Articulo.setText(arrayList.get(position).getArticulo());
+        Descripcion.setText(arrayList.get(position).getDescripcion());
+        Cantidad.setText(arrayList.get(position).getCantidad());
+        Venta.setText(arrayList.get(position).getVenta());
+        Almacen.setText(arrayList.get(position).getAlmacen());
 
 
         return convertView;

@@ -28,6 +28,13 @@
             android:textSize="24sp"
             android:text="Facturas" />
         <TextView
+            android:id="@+id/vfcl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textSize="24sp"
+            android:text="CL-CLiente" />
+        <TextView
             android:id="@+id/Vffecha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,24 +42,29 @@
             android:textSize="24sp"
             android:text="Fecha" />
 
-        <TextView
-            android:id="@+id/vfcl"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textSize="24sp"
-            android:text="CL-CLiente" />
-
-        <ListView
-            android:id="@+id/lista_art_de_facturas"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </ListView>
 
         <Button
-            android:text="Buscar"
+            android:text="Imprimir F. Ticket"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/btnverbuscar"/>
+            android:layout_height="wrap_content"
+            android:id="@+id/btnImprimirTicket"/>
+        <Button
+            android:text="Imprmir F. Bodega"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnImprimirBD"/>
+
+        <Button
+            android:text="Imprmir Entrega"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnImprimirEnt"/>
+
+        <Button
+            android:text="Cancelar Entrega"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCancelarEntrega"/>
 
         <TextView
             android:id="@+id/txtError"
