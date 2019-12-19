@@ -15,6 +15,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.navigationdrawact.JsonClass.Factura;
 import com.example.navigationdrawact.adapter.AdapterListArtFactura;
 import com.google.gson.Gson;
@@ -27,6 +28,7 @@ public class VerFactura extends AppCompatActivity {
     TextView txtErrorart,vffactura,Vffecha,vfcl;
     Factura model;
     Button btnImprimirTicket,btnImprimirBD,btnImprimirEnt,btnCancelarEntrega;
+    private RequestQueue queuexFactura;
 
 
     @Override
@@ -61,48 +63,46 @@ public class VerFactura extends AppCompatActivity {
 
                 //por aqui vas creando el objeto para enviarlo por posat
                 //--------------------------___________________________________
-                Gson gson = new Gson();
-                JSONObject xRootObject = new JSONObject();
+                queuexFactura = Volley.newRequestQueue(VerFactura.this);
+
+                JSONObject jsonRequest = new JSONObject();
                 try
                 {
-                    //String json =gson.toJson(model);
-                    String json = new Gson().toJson(model);
-                    Log.d("8val puetp","{\"xRootObject\":"+json+"}");
-                    xRootObject.put("xRootObject","{\"xRootObject\":"+json+"}");
-                } catch (JSONException e) {
-                    Log.d("put Error2:",e.getMessage());
+                    jsonRequest.put("Factura",model.getFACTURA());//txt1.getText().toString()
+                }
+                catch (JSONException e)
+                {
+                    Toast.makeText(VerFactura.this,"xError:",Toast.LENGTH_LONG).show();
                     e.printStackTrace();
                 }
-                if(model.size()>0){
-                    JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, xRootObject, new Response.Listener<JSONObject>() {
-                        @Override
-                        public void onResponse(JSONObject response)
+                JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, jsonRequest, new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response)
+                    {
+                        try
                         {
-                            try {
-                                Log.d("PostVolley response ", response.toString());
-                                xtxtcount.setText(response.toString());
-                            }
-                            catch (Exception e) {
-                                Log.d("Error2:",e.getMessage());
-                                e.printStackTrace();
-                            } //contralor
+                            txtErrorart.setText("Impresion pendiente en : "+response.getString("response"));
+                            Log.d("response ", response.toString());
+                            //Log.d("response ", response.getString("status")+" 2 "+response.getString("value"));
+                        } catch (Exception e) {
+                            txtErrorart.setText("Error e1");
+                            e.printStackTrace();
                         }
-                    }, new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error)
-                        {
-                            Log.d("Error3: ",error.toString());
-                        }
-                    });
-                    queue3.add(request);
-                    xtxtcount.setText("");
-                }//Fin if
-                else{Toast.makeText(MainActivity.this," No se ha ingresado nada ",Toast.LENGTH_LONG).show();}
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error)
+                    {
+                        txtErrorart.setText("PostTextVolley Errorx9 "+error.toString());
+                    }
+                });
+                queuexFactura.add(request);
+
+
                 //-------------------------______________________________________
 
 
-            }
-        });
+            }});//fun button
 
 
     }//Fin oncreate
