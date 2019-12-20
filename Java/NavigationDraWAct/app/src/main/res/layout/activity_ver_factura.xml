@@ -19,6 +19,12 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             android:textSize="24sp"
             android:gravity="center"/>
+        <TextView
+            android:id="@+id/txtError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            />
 
         <TextView
             android:id="@+id/vffactura"
@@ -55,21 +61,18 @@
             android:id="@+id/btnImprimirBD"/>
 
         <Button
-            android:text="Imprmir Entrega"
+            android:text="Imprmir Entrega +Reciente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btnImprimirEnt"/>
 
         <Button
-            android:text="Cancelar Entrega"
+            android:text="Crear NC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnCancelarEntrega"/>
+            android:id="@+id/btnCrearNC"/>
 
-        <TextView
-            android:id="@+id/txtError"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+
 
 
     </LinearLayout>

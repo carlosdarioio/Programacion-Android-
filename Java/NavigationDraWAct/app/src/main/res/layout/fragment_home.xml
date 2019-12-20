@@ -23,22 +23,17 @@
             android:text="Buscar Factura" />
 
         <Button
-            android:id="@+id/btnEstadoGuia"
+            android:id="@+id/btnDescuentoManual"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Estado de Guia" />
-
+            android:text="Dar Descuento Manual" />
         <Button
-            android:id="@+id/btnBuscarZona"
+            android:id="@+id/btnDesbloquearArt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Buscar Zona" />
+            android:text="Desbloquear Articulo" />
 
-        <Button
-            android:id="@+id/btnZonaXDep"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Zona X Departamento" />
+
 
     </LinearLayout>
 

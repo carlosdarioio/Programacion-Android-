@@ -27,8 +27,8 @@ import java.util.ArrayList;
 public class VerFactura extends AppCompatActivity {
     TextView txtErrorart,vffactura,Vffecha,vfcl;
     Factura model;
-    Button btnImprimirTicket,btnImprimirBD,btnImprimirEnt,btnCancelarEntrega;
-    private RequestQueue queuexFactura;
+    Button btnImprimirTicket,btnImprimirBD,btnImprimirEnt,btnCrearNC;
+    private RequestQueue queuexFactura,queuexFacturaBodega;
 
 
     @Override
@@ -52,19 +52,16 @@ public class VerFactura extends AppCompatActivity {
         btnImprimirTicket=findViewById(R.id.btnImprimirTicket);
         btnImprimirBD=findViewById(R.id.btnImprimirBD);
         btnImprimirEnt=findViewById(R.id.btnImprimirEnt);
-        btnCancelarEntrega=findViewById(R.id.btnCancelarEntrega);
+        btnCrearNC=findViewById(R.id.btnCrearNC);
 
         btnImprimirTicket.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(BuscarFactura.this,"btnbuscar :",Toast.LENGTH_LONG).show();
-                //url del post
+                //url del post 1150219857
                 String url = "http://10.1.201.5/DXInvIT/SapService.svc/xPostAndroidImpFacturaTk";//trabajo
-
-                //por aqui vas creando el objeto para enviarlo por posat
                 //--------------------------___________________________________
                 queuexFactura = Volley.newRequestQueue(VerFactura.this);
-
                 JSONObject jsonRequest = new JSONObject();
                 try
                 {
@@ -97,12 +94,138 @@ public class VerFactura extends AppCompatActivity {
                     }
                 });
                 queuexFactura.add(request);
-
-
                 //-------------------------______________________________________
+            }});//fun button Imprimir Ticket
 
+        //Imprimir Factura Bodega
+        btnImprimirBD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast.makeText(BuscarFactura.this,"btnbuscar :",Toast.LENGTH_LONG).show();
+                //url del post 1150219857
+                String url = "http://10.1.201.5/DXInvIT/SapService.svc/xPostAndroidImpFacturaBodega";//trabajo
+                //--------------------------___________________________________
+                queuexFacturaBodega = Volley.newRequestQueue(VerFactura.this);
+                JSONObject jsonRequest = new JSONObject();
+                try
+                {
+                    jsonRequest.put("Factura",model.getFACTURA());//txt1.getText().toString()
+                }
+                catch (JSONException e)
+                {
+                    Toast.makeText(VerFactura.this,"xError:",Toast.LENGTH_LONG).show();
+                    e.printStackTrace();
+                }
+                JsonObjectRequest request2 = new JsonObjectRequest(Request.Method.POST, url, jsonRequest, new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response)
+                    {
+                        try
+                        {
+                            txtErrorart.setText("Impresion Grande pendiente en : "+response.getString("response"));
+                            Log.d("response ", response.toString());
+                            //Log.d("response ", response.getString("status")+" 2 "+response.getString("value"));
+                        } catch (Exception e) {
+                            txtErrorart.setText("Error e1");
+                            e.printStackTrace();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error)
+                    {
+                        txtErrorart.setText("PostTextVolley Errorx9 "+error.toString());
+                    }
+                });
+                queuexFacturaBodega.add(request2);
+                //-------------------------______________________________________
+            }});//fun button Imprimir Factura Bodega
+        //
+        //Imprimir Entrega
+        btnImprimirEnt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Factura 1150219857
+                String url = "http://10.1.201.5/DXInvIT/SapService.svc/xPostAndroidImpEntrega";//trabajo
+                //--------------------------___________________________________
+                queuexFacturaBodega = Volley.newRequestQueue(VerFactura.this);
+                JSONObject jsonRequest = new JSONObject();
+                try
+                {
+                    jsonRequest.put("Factura",model.getFACTURA());//txt1.getText().toString()
+                }
+                catch (JSONException e)
+                {
+                    Toast.makeText(VerFactura.this,"xError:",Toast.LENGTH_LONG).show();
+                    e.printStackTrace();
+                }
+                JsonObjectRequest request2 = new JsonObjectRequest(Request.Method.POST, url, jsonRequest, new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response)
+                    {
+                        try
+                        {
+                            txtErrorart.setText("Impresion Entrega pendiente en : "+response.getString("response"));
+                            Log.d("response ", response.toString());
+                            //Log.d("response ", response.getString("status")+" 2 "+response.getString("value"));
+                        } catch (Exception e) {
+                            txtErrorart.setText("Error ent1");
+                            e.printStackTrace();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error)
+                    {
+                        txtErrorart.setText("PostT Errorb1 "+error.toString());
+                    }
+                });
+                queuexFacturaBodega.add(request2);
+                //-------------------------______________________________________
+            }});//fun button Imprimir Entrega
 
-            }});//fun button
+        //btnCrearNC
+        btnCrearNC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Factura 1150219857
+                String url = "http://10.1.201.5/DXInvIT/SapService.svc/xPostAndroidCrearNC";//trabajo
+                //--------------------------___________________________________
+                queuexFacturaBodega = Volley.newRequestQueue(VerFactura.this);
+                JSONObject jsonRequest = new JSONObject();
+                try
+                {
+                    jsonRequest.put("Factura",model.getFACTURA());//txt1.getText().toString()
+                }
+                catch (JSONException e)
+                {
+                    Toast.makeText(VerFactura.this,"xError:",Toast.LENGTH_LONG).show();
+                    e.printStackTrace();
+                }
+                JsonObjectRequest request2 = new JsonObjectRequest(Request.Method.POST, url, jsonRequest, new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response)
+                    {
+                        try
+                        {
+                            txtErrorart.setText(" Respuesta : "+response.getString("response"));
+                            Log.d("response ", response.toString());
+                            //Log.d("response ", response.getString("status")+" 2 "+response.getString("value"));
+                        } catch (Exception e) {
+                            txtErrorart.setText("Error ent1");
+                            e.printStackTrace();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error)
+                    {
+                        txtErrorart.setText("PostT Errorb1 "+error.toString());
+                    }
+                });
+                queuexFacturaBodega.add(request2);
+                //-------------------------______________________________________
+            }});//fun button btnCrearNC
 
 
     }//Fin oncreate

@@ -15,6 +15,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.navigationdrawact.BuscarFactura;
+import com.example.navigationdrawact.DarDescuentoManual;
 import com.example.navigationdrawact.Main2ActivityBasic;
 import com.example.navigationdrawact.R;
 
@@ -49,6 +50,19 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), BuscarFactura.class);
+                startActivity(intent);
+            }
+        });
+        //----------
+
+        //------------------
+        Button btnDarDescuentoManual;
+        btBuscaFactura = root.findViewById(R.id.btnDescuentoManual);
+        btBuscaFactura.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), DarDescuentoManual.class);
                 startActivity(intent);
             }
         });
