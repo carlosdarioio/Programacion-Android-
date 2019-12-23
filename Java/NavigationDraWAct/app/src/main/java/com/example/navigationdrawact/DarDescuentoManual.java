@@ -37,12 +37,13 @@ public class DarDescuentoManual extends AppCompatActivity {
         txtresponse=findViewById(R.id.response);
 
 
-        //btnCrearNC
+        //btn Descuento Manual
         btnDescuento.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Factura 1150219857
-                String url = "http://10.1.201.5/DXInvIT/SapService.svc/xPostAndroidCrearNC";//trabajo
+                if(articulo.getText().toString().length()>0 && descuento.getText().toString().length()>0 && fecha.getText().toString().length()>0){
+                String url = "http://10.1.201.5/DXInvIT/SapService.svc/xDarDescManual";//trabajo
                 //por aqui vas pendiente servicio
                 //--------------------------___________________________________
                 queuexDesc = Volley.newRequestQueue(DarDescuentoManual.this);
@@ -66,6 +67,8 @@ public class DarDescuentoManual extends AppCompatActivity {
                         {
                             txtresponse.setText(" Respuesta : "+response.getString("response"));
                             Log.d("response ", response.toString());
+                            descuento.setText("");
+                            fecha.setText("");
                             //Log.d("response ", response.getString("status")+" 2 "+response.getString("value"));
                         } catch (Exception e) {
                             txtresponse.setText("Error ent1");
@@ -81,7 +84,11 @@ public class DarDescuentoManual extends AppCompatActivity {
                 });
                 queuexDesc.add(request2);
                 //-------------------------______________________________________
-            }});//fun button btnCrearNC
+            }else{txtresponse.setText(" Rellenar todos los datos ");}
+            }
+                                        }
+            );//fin Dar Descuento Manual
+
 
     }
 }

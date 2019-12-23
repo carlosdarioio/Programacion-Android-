@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DarDescuentoManual">
+    tools:context=".DesbloquearArticulos">
     >
     <LinearLayout
         android:orientation="vertical"
@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         >
         <TextView
-            android:text="Especificar Numero De Factura"
+            android:text="Especificar Articulo y almacen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/textView2"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1" android:textSize="24sp"
@@ -41,28 +41,18 @@
             android:layout_height="wrap_content"
             android:inputType="number"
             android:ems="10"
-            android:id="@+id/descuento"
+            android:id="@+id/almacen"
             android:hint="DescuentoPrecio"/>
-
-        <EditText
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/fecha"
-            android:hint="20191226"/>
 
         <Button
             android:text="Aplicar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnDescuento"/>
+            android:id="@+id/btnDescArt"/>
 
 
     </LinearLayout>
 
 
 </androidx.core.widget.NestedScrollView>
-
 
