@@ -1,2 +1,2 @@
 # Programacion-Android-
-Proyectos/practicas realizadas en android Para realizar diversas acciones 
+Proyectos/practicas realizadas en android Java/Kotlin Para realizar diversas acciones 
