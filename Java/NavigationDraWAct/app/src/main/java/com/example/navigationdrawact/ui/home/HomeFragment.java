@@ -15,6 +15,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.navigationdrawact.BuscarFactura;
+import com.example.navigationdrawact.ClBuscar;
 import com.example.navigationdrawact.DarDescuentoManual;
 import com.example.navigationdrawact.DesbloquearArticulos;
 import com.example.navigationdrawact.Main2ActivityBasic;
@@ -77,6 +78,19 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), DesbloquearArticulos.class);
+                startActivity(intent);
+            }
+        });
+        //----------
+
+        //------------------
+        Button btnDatosCL;
+        btnDatosCL = root.findViewById(R.id.btnDatosCL);
+        btnDatosCL.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ClBuscar.class);
                 startActivity(intent);
             }
         });

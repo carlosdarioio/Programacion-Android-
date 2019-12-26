@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".DesbloquearArticulos"></activity>
+        <activity android:name=".CLver"></activity>
+        <activity android:name=".ClListar" />
+        <activity android:name=".ClBuscar" />
+        <activity android:name=".DesbloquearArticulos" />
         <activity android:name=".DarDescuentoManual" />
         <activity android:name=".VerFactura" />
         <activity android:name=".ListarFacturas" />

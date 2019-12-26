@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    tools:context=".ClListar">
+>
+
+<ListView
+    android:id="@+id/listacl"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="25dp"
+    android:layout_marginBottom="25dp"
+    android:background="@color/cardview_shadow_start_color"
+    android:layout_weight="@android:integer/config_shortAnimTime"
+    android:transitionGroup="true"
+    android:padding="8dip"
+    android:paddingBottom="20dp"
+
+    >
+
+</ListView>
+
+</LinearLayout>
+

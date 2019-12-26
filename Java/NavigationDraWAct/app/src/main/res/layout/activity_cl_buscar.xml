@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    tools:context=".ClBuscar">
+    >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:text="Especificar Cl/Nombre Del cliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/textView2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" android:textSize="24sp"
+                android:gravity="center"/>
+            <EditText
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:id="@+id/clEditCliente"
+                android:hint="CL / Nombre"
+                />
+
+            <Button
+                android:text="Buscar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/btnBuscarcl"/>
+
+            <TextView
+                android:id="@+id/txtErrorclb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
