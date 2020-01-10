@@ -83,18 +83,7 @@ public class HomeFragment extends Fragment {
         });
         //----------
 
-        //------------------
-        Button btnDatosCL;
-        btnDatosCL = root.findViewById(R.id.btnDatosCL);
-        btnDatosCL.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), ClBuscar.class);
-                startActivity(intent);
-            }
-        });
-        //----------
+
 
 
         return root;

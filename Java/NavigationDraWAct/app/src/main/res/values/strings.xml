@@ -9,9 +9,17 @@
 
     <string name="menu_home">Ventas</string>
     <string name="menu_gallery">Caja</string>
-    <string name="menu_slideshow">B7</string>
+    <string name="menu_slideshow">Clientes</string>
     <string name="menu_tools">Despaacho</string>
     <string name="menu_share">SharePend</string>
     <string name="menu_send">SendPend</string>
     <string name="title_activity_main2_basic">Main2ActivityBasic</string>
+
+
+    <string name="label_name">Name</string>
+    <string name="label_address">Address</string>
+    <string name="label_city">City</string>
+    <string name="label_state">State</string>
+    <string name="label_zip">ZIP</string>
+    <string name="label_save">Save</string>
 </resources>

@@ -50,9 +50,6 @@ public class ClBuscar extends AppCompatActivity {
     private void GetClienteContactInfoVolley()
     {
         queueFindCL = Volley.newRequestQueue(this);
-        //por aqui vas da error si buscas con espacio por ejemplo: carlos dario
-        //EditCliente.getText().toString()
-        //URLEncoder.encode(searchBox.getText(), "UTF-8")
         String url="http://10.1.201.5/DXInvIT/SapService.svc/GetClienteContactInfo/"+EditCliente.getText().toString(); //Trabajo
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override

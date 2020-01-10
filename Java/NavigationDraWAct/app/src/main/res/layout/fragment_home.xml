@@ -18,25 +18,32 @@
 
         <Button
             android:id="@+id/btBuscaFactura"
-            android:layout_width="match_parent"
+            style="@android:style/Widget.Button"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="8dp"
             android:text="Buscar Factura" />
+
 
         <Button
             android:id="@+id/btnDescuentoManual"
-            android:layout_width="match_parent"
+            style="@android:style/Widget.Holo.Button.Small"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
             android:text="Dar Descuento Manual" />
+
         <Button
             android:id="@+id/btnDesbloquearArt"
-            android:layout_width="match_parent"
+            style="@android:style/Widget.DeviceDefault.Button"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp"
             android:text="Desbloquear Articulo" />
-        <Button
-            android:id="@+id/btnDatosCL"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ver Datos de CL" />
+
 
 
 

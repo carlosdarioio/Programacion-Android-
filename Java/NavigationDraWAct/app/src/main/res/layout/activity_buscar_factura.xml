@@ -22,12 +22,16 @@
             android:layout_height="wrap_content"
             android:inputType="number"
             android:ems="10"
+            android:layout_marginTop="16dp"
             android:id="@+id/EditNumFactura" android:hint="Numero Factura"/>
 
         <Button
-            android:text="Buscar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/btnBuscar"/>
+            android:id="@+id/btnBuscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="16dp"
+            android:text="Buscar" />
 
         <TextView
             android:id="@+id/txtError"

@@ -35,6 +35,12 @@ public class CLver extends AppCompatActivity {
         cltel2.setText("Telefono2: "+ model.getPhone2());
         clcel.setText("Celular: "+ model.getCelular());
 
+        //por aqui vas
+
+        // //crear la opcion para bloquear, desbloquear
+        //pasa los datos a un edic text para que se pueda editar
+        //añadile el rtn
+        //añadir boton para actualizar nombre/rtn de cliente
         Button clbtnblckUn;
         clbtnblckUn=findViewById(R.id.clbtnblckUn);
         clbtnblckUn.setOnClickListener(new View.OnClickListener() {

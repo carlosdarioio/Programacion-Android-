@@ -4,12 +4,14 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
     tools:context=".ClBuscar">
     >
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+
             >
             <TextView
                 android:text="Especificar Cl/Nombre Del cliente"
@@ -17,20 +19,25 @@
                 android:layout_height="wrap_content" android:id="@+id/textView2"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1" android:textSize="24sp"
                 android:gravity="center"/>
+
             <EditText
 
+                android:id="@+id/clEditCliente"
+                style="@android:style/Widget.DeviceDefault.Light.EditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
                 android:ems="10"
-                android:id="@+id/clEditCliente"
                 android:hint="CL / Nombre"
-                />
+                android:inputType="text" />
 
             <Button
-                android:text="Buscar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/btnBuscarcl"/>
+                android:id="@+id/btnBuscarcl"
+                style="@android:style/Widget.DeviceDefault.Light.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="16dp"
+                android:text="Buscar" />
 
             <TextView
                 android:id="@+id/txtErrorclb"

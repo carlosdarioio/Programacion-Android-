@@ -1,9 +1,11 @@
 package com.example.navigationdrawact.ui.slideshow;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -12,10 +14,15 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.navigationdrawact.ClBuscar;
 import com.example.navigationdrawact.R;
 
-public class SlideshowFragment extends Fragment {
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
+public class SlideshowFragment extends Fragment {
+    //clientes----------------
     private SlideshowViewModel slideshowViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -30,6 +37,41 @@ public class SlideshowFragment extends Fragment {
                 textView.setText(s);
             }
         });
+
+        Date today = Calendar.getInstance().getTime();//getting date
+        SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");//formating according to my need
+        String date = formatter.format(today);
+
+
+        long timeInMillis = System.currentTimeMillis();
+        Calendar cal1 = Calendar.getInstance();
+        cal1.setTimeInMillis(timeInMillis);
+        SimpleDateFormat dateFormat = new SimpleDateFormat(
+                "dd/MM/yyyy hh:mm:ss a");
+        String hour = dateFormat.format(cal1.getTime());
+
+
+        TextView clindexfecha = root.findViewById(R.id.clindexfecha);
+        clindexfecha.setText(date);
+
+        TextView clindexhora = root.findViewById(R.id.clindexhora);
+        clindexhora.setText(hour);
+
+
+        //------------------
+        Button btnDatosCL;
+        btnDatosCL = root.findViewById(R.id.btnDatosCL);
+        btnDatosCL.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ClBuscar.class);
+                startActivity(intent);
+            }
+        });
+        //----------
+
+
         return root;
     }
 }
