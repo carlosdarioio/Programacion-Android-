@@ -27,8 +27,8 @@ import java.util.ArrayList;
 public class VerFactura extends AppCompatActivity {
     TextView txtErrorart,vffactura,Vffecha,vfcl;
     Factura model;
-    Button btnImprimirTicket,btnImprimirBD,btnImprimirEnt,btnCrearNC;
-    private RequestQueue queuexFactura,queuexFacturaBodega;
+    Button btnImprimirTicket,btnImprimirBD,btnImprimirEnt,btnCrearNC,btnImprimirFcarta;
+    private RequestQueue queuexFactura,queuexFacturaBodega,queuexFacturacarta;
 
 
     @Override
@@ -53,6 +53,7 @@ public class VerFactura extends AppCompatActivity {
         btnImprimirBD=findViewById(R.id.btnImprimirBD);
         btnImprimirEnt=findViewById(R.id.btnImprimirEnt);
         btnCrearNC=findViewById(R.id.btnCrearNC);
+        btnImprimirFcarta=findViewById(R.id.btnImprimirFcarta);
 
         btnImprimirTicket.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -140,6 +141,49 @@ public class VerFactura extends AppCompatActivity {
                 queuexFacturaBodega.add(request2);
                 //-------------------------______________________________________
             }});//fun button Imprimir Factura Bodega
+
+        //Imprimir Factura Carta
+        btnImprimirFcarta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //x aqui vas
+                String url = "http://10.1.201.5/DXInvIT/SapService.svc/xPostAndroidImpFacturaCarta";//trabajo
+                //--------------------------___________________________________
+                queuexFacturacarta = Volley.newRequestQueue(VerFactura.this);
+                JSONObject jsonRequest = new JSONObject();
+                try
+                {
+                    jsonRequest.put("Factura",model.getFACTURA());//txt1.getText().toString()
+                }
+                catch (JSONException e)
+                {
+                    Toast.makeText(VerFactura.this,"xError:",Toast.LENGTH_LONG).show();
+                    e.printStackTrace();
+                }
+                JsonObjectRequest request2 = new JsonObjectRequest(Request.Method.POST, url, jsonRequest, new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response)
+                    {
+                        try
+                        {
+                            txtErrorart.setText("Impresion Grande pendiente en : "+response.getString("response"));
+                            Log.d("response ", response.toString());
+                            //Log.d("response ", response.getString("status")+" 2 "+response.getString("value"));
+                        } catch (Exception e) {
+                            txtErrorart.setText("Error e1");
+                            e.printStackTrace();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error)
+                    {
+                        txtErrorart.setText("PostTextVolley Errorx9 "+error.toString());
+                    }
+                });
+                queuexFacturacarta.add(request2);
+                //-------------------------______________________________________
+            }});//fun button Imprimir Factura Carta
         //
         //Imprimir Entrega
         btnImprimirEnt.setOnClickListener(new View.OnClickListener() {

@@ -61,6 +61,12 @@
             android:id="@+id/btnImprimirBD"/>
 
         <Button
+            android:text="Imprmir F. Carta +12 Art"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnImprimirFcarta"/>
+
+        <Button
             android:text="Imprmir Entrega +Reciente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
