@@ -1,12 +1,15 @@
 package com.example.navigationdrawact;
 
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import android.view.MenuItem;
 import android.view.View;
 
 import androidx.navigation.NavController;
@@ -66,6 +69,43 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+
+    //2020
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.action_Wfactura:
+                Uri uriwf = Uri.parse("http://10.1.201.5/DxWebIT//WFactura.aspx"); // missing 'http://' will cause crashed
+                Intent intentWfactura = new Intent(Intent.ACTION_VIEW, uriwf);
+                startActivity(intentWfactura);
+                return true;
+
+            case R.id.action_OINVinGuide:
+                Uri inGuide = Uri.parse("http://10.1.201.5/DxWebIT/OINVinGuide.aspx"); // missing 'http://' will cause crashed
+                Intent intentinGuide = new Intent(Intent.ACTION_VIEW, inGuide);
+                startActivity(intentinGuide);
+                return true;
+            case R.id.action_ZonasXDep:
+                Uri ZonasXDep = Uri.parse("http://10.1.201.5/DxWebIT/Zonas/ZonaXDep.aspx"); // missing 'http://' will cause crashed
+                Intent intentZonasXDep = new Intent(Intent.ACTION_VIEW, ZonasXDep);
+                startActivity(intentZonasXDep);
+                return true;
+            case R.id.action_ZonasXZonas:
+                Uri ZonasXZonas = Uri.parse("http://10.1.201.5/DxWebIT/Zonas/Zonas.aspx"); // missing 'http://' will cause crashed
+                Intent intentZonasXZonas = new Intent(Intent.ACTION_VIEW, ZonasXZonas);
+                startActivity(intentZonasXZonas);
+                return true;
+            case R.id.action_WCliente:
+                Uri WCliente = Uri.parse("http://10.1.201.5/DxWebIT//Wcliente.aspx"); // missing 'http://' will cause crashed
+                Intent intentWCliente = new Intent(Intent.ACTION_VIEW, WCliente);
+                startActivity(intentWCliente);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+    //2020
 
     @Override
     public boolean onSupportNavigateUp() {

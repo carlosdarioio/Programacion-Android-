@@ -9,6 +9,33 @@
     <item
         android:id="@+id/action_settings2"
         android:orderInCategory="100"
-        android:title="Poner opciones de DxWebIT"
+        android:title="DxWebIT:"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_Wfactura"
+        android:orderInCategory="100"
+        android:title="Estado Factura"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_OINVinGuide"
+        android:orderInCategory="100"
+        android:title="Estado Guia"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_ZonasXDep"
+        android:orderInCategory="100"
+        android:title="Zonas X Dep"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_ZonasXZonas"
+        android:orderInCategory="100"
+        android:title="Zonas X Zonas"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_WCliente"
+        android:orderInCategory="100"
+        android:title="WCliente"
         app:showAsAction="never" />
 </menu>

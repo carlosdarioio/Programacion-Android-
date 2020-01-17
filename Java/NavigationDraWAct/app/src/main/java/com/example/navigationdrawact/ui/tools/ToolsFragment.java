@@ -1,9 +1,12 @@
 package com.example.navigationdrawact.ui.tools;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -12,12 +15,13 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+
 import com.example.navigationdrawact.R;
 
 public class ToolsFragment extends Fragment {
 
     private ToolsViewModel toolsViewModel;
-
+//Despacho
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         toolsViewModel =
@@ -30,6 +34,34 @@ public class ToolsFragment extends Fragment {
                 textView.setText(s);
             }
         });
+
+        //------------------
+        Button btnReimpTicketDespacho;
+        btnReimpTicketDespacho = root.findViewById(R.id.btnReimpTicketDespacho);
+        btnReimpTicketDespacho.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("http://10.1.201.5/DxWebIT/Bodega/xxReimprTKDespxx.aspx"); // missing 'http://' will cause crashed
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
+        //----------
+
+        //------------------
+        Button btnCambZonaxFactura;
+        btnCambZonaxFactura = root.findViewById(R.id.btnCambZonaxFactura);
+        btnCambZonaxFactura.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("http://10.1.201.5/DxWebIT/CambZnxFact.aspx"); // missing 'http://' will cause crashed
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
+        //----------
         return root;
     }
 }
