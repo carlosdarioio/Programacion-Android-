@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TransVer">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <TextView
+            android:id="@+id/txtError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            />
+        <TextView
+            android:text="Visualizando datos de la factura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/transferencianum"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textSize="24sp"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/transferenciafecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/tansferenciahasta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textSize="24sp"
+            android:text="Facturas"
+            android:gravity="center"
+            />
+
+
+        <Button
+            android:text="Imprimir Transferencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/transbtnImprimirT"/>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

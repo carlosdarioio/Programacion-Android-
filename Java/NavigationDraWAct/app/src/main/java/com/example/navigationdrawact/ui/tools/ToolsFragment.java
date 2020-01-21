@@ -16,7 +16,9 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 
+
 import com.example.navigationdrawact.R;
+import com.example.navigationdrawact.TransBuscar2;
 
 public class ToolsFragment extends Fragment {
 
@@ -61,7 +63,23 @@ public class ToolsFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        //-----------------
+
+
+        //------------------
+        Button btnRSolTras;
+        btnRSolTras = root.findViewById(R.id.btnRSolTras);
+        btnRSolTras.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), TransBuscar2.class);
+                startActivity(intent);
+            }
+        });
         //----------
+
+
         return root;
     }
 }

@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".CLver"></activity>
+        <activity android:name=".TransVer"></activity>
+        <activity android:name=".TransListar" />
+        <activity android:name=".TransBuscar2" />
+        <activity android:name=".CLver" />
         <activity android:name=".ClListar" />
         <activity android:name=".ClBuscar" />
         <activity android:name=".DesbloquearArticulos" />

@@ -35,6 +35,27 @@
             android:layout_marginTop="8dp"
             android:text="Cambiar Zona Factura" />
 
+        <Button
+            android:id="@+id/btnRSolTras"
+            style="@android:style/Widget.CompoundButton.Star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:text="Reimprimir Sol Traslado" />
+
+        <Button
+            android:id="@+id/btnRSGuiaTras"
+            style="@android:style/Widget.CompoundButton.Star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:text="Pendiente Reimprimir guia traslado" />
+
+
+
+
     </LinearLayout>
 
 </LinearLayout>
