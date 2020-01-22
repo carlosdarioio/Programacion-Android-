@@ -51,7 +51,16 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
-            android:text="Pendiente Reimprimir guia traslado" />
+            android:text=" Reimprimir guia traslado" />
+
+        <Button
+            android:id="@+id/btnFindPickingGuiaTras"
+            style="@android:style/Widget.CompoundButton.Star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:text="Pendiente Buscar Picking en guia de traslado" />
 
 
 

@@ -35,8 +35,6 @@ public class BuscarFactura extends AppCompatActivity {
     EditText EditNumFactura;
     FindFacturaList xListFacturas;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,14 +52,7 @@ public class BuscarFactura extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
     }//Fin on create
-
-
 
     //GetListClass Lista
     //-----------------
@@ -97,8 +88,6 @@ public class BuscarFactura extends AppCompatActivity {
                         txtError.setText("Sin Resultados "+xListFacturas.getFacturas().get(0).getFACTURA()+" xx");
 
                     }
-
-
 
                 } catch (Exception e) {
                     txtError.setText("e1 "+e.getMessage());

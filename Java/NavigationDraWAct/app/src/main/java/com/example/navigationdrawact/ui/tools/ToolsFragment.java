@@ -16,9 +16,10 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 
-
+import com.example.navigationdrawact.FingPickingEnGuia;
 import com.example.navigationdrawact.R;
 import com.example.navigationdrawact.TransBuscar2;
+import com.example.navigationdrawact.TransReimprimirGuia;
 
 public class ToolsFragment extends Fragment {
 
@@ -78,6 +79,36 @@ public class ToolsFragment extends Fragment {
             }
         });
         //----------
+
+        //------------
+        Button btnRSGuiaTras;
+        btnRSGuiaTras=root.findViewById(R.id.btnRSGuiaTras);
+        btnRSGuiaTras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), TransReimprimirGuia.class);
+                startActivity(intent);
+
+            }
+        });
+
+        //------------
+
+
+
+        //------------
+        Button btnFindPickingGuiaTras;
+        btnFindPickingGuiaTras=root.findViewById(R.id.btnFindPickingGuiaTras);
+        btnFindPickingGuiaTras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), FingPickingEnGuia.class);
+                startActivity(intent);
+
+            }
+        });
+
+        //------------
 
 
         return root;

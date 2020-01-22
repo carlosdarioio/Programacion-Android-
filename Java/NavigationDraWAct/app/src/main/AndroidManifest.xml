@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".TransVer"></activity>
+        <activity android:name=".FingPickingEnGuia"></activity>
+        <activity android:name=".TransReimprimirGuia" />
+        <activity android:name=".TransVer" />
         <activity android:name=".TransListar" />
         <activity android:name=".TransBuscar2" />
         <activity android:name=".CLver" />
