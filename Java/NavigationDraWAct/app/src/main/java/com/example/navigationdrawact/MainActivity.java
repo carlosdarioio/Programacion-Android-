@@ -101,6 +101,14 @@ public class MainActivity extends AppCompatActivity {
                 Intent intentWCliente = new Intent(Intent.ACTION_VIEW, WCliente);
                 startActivity(intentWCliente);
                 return true;
+            case R.id.action_marcaje:
+                Intent intentMarcarxCod = new Intent(this, MarcarPorCodigo.class);
+                startActivity(intentMarcarxCod);
+                return true;
+            case R.id.action_marcajeFind:
+                Intent intentFindMarc = new Intent(this, MarcajeBuscarCodigo.class);
+                startActivity(intentFindMarc);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

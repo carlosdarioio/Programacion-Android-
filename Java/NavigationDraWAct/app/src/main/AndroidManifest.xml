@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MarcarPorCodigo"></activity>
+        <activity android:name=".MarcajeBuscarCodigo"></activity>
+        <activity android:name=".MarcarPorCodigo" />
         <activity android:name=".FingPickingEnGuia" />
         <activity android:name=".TransReimprimirGuia" />
         <activity android:name=".TransVer" />

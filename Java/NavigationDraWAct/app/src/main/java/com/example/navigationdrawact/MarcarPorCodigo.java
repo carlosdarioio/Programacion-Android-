@@ -26,6 +26,7 @@ public class MarcarPorCodigo extends AppCompatActivity {
     Button MarcarBtnMarca;
     EditText MarcarTracve,MarcarAlmacen;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +34,10 @@ public class MarcarPorCodigo extends AppCompatActivity {
 
         Macrartxterror=findViewById(R.id.MarcartxtError);
         MarcarTracve=findViewById(R.id.MarcarTracve);
+
+
         MarcarAlmacen=findViewById(R.id.MarcarAlmacen);
+        MarcarAlmacen.setEnabled(false);
 
         MarcarBtnMarca=findViewById(R.id.MarcarBtnMarcar);
 
@@ -48,7 +52,8 @@ public class MarcarPorCodigo extends AppCompatActivity {
                     JSONObject jsonRequest = new JSONObject();
                     try
                     {
-                        jsonRequest.put("valor",MarcarTracve.getText());
+                        jsonRequest.put("valor1",MarcarTracve.getText());
+                        jsonRequest.put("valor2",MarcarAlmacen.getText());
                     }
                     catch (JSONException e)
                     {
@@ -66,7 +71,7 @@ public class MarcarPorCodigo extends AppCompatActivity {
                                 MarcarTracve.setText("");
                                 //Log.d("response ", response.getString("status")+" 2 "+response.getString("value"));
                             } catch (Exception e) {
-                                Macrartxterror.setText("Error ent1");
+                                Macrartxterror.setText("Error Marca1 ");
                                 e.printStackTrace();
                             }
                         }
@@ -74,7 +79,7 @@ public class MarcarPorCodigo extends AppCompatActivity {
                         @Override
                         public void onErrorResponse(VolleyError error)
                         {
-                            Macrartxterror.setText("PostT Errorb1 "+error.toString());
+                            Macrartxterror.setText("PostT EMarcar2 "+error.toString());
                         }
                     });
                     Marcarqueue.add(request3);
