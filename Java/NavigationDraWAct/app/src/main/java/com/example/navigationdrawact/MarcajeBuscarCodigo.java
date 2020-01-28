@@ -21,6 +21,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.navigationdrawact.JsonClass.Marcaje;
 import com.example.navigationdrawact.JsonClass.MarcajeBuscarCodigoClase1;
+import com.example.navigationdrawact.adapter.MarcajeXCodigoApapter;
 import com.google.gson.Gson;
 
 import org.json.JSONException;
@@ -34,6 +35,8 @@ public class MarcajeBuscarCodigo extends AppCompatActivity {
     TextView mcbtxtError;
     Button mcbbtnBuscar;
     EditText mcbCodigo;
+    private ListView lista;
+    private MarcajeXCodigoApapter MarcajeAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +44,10 @@ public class MarcajeBuscarCodigo extends AppCompatActivity {
         setContentView(R.layout.activity_marcaje_buscar_codigo);
 
         mcbtxtError=findViewById(R.id.mcbtxtError);
-        mcbCodigo=findViewById(R.id.mcbCodigo);;
+        mcbCodigo=findViewById(R.id.mcbCodigo);
+
+        lista=(ListView)findViewById(R.id.mcblista);//agregar adaptador en lista
+
 
         mcbbtnBuscar=findViewById(R.id.mcbbtnBuscar);
         mcbbtnBuscar.setOnClickListener(new View.OnClickListener() {
@@ -83,17 +89,14 @@ public class MarcajeBuscarCodigo extends AppCompatActivity {
         //--por aqui vas pendiente meter La Lista al AdapterListCl
        //-------------------------------------------
         ArrayList<Marcaje> model = (ArrayList<Marcaje>) xListMarcaje.getMarcajes();
-        nombresAdapter=new AdapterListCl(this,model);
-        lista=(ListView)findViewById(R.id.mcblista);//agregar adaptador en lista
-        lista.setAdapter(nombresAdapter);
+        MarcajeAdapter=new MarcajeXCodigoApapter(MarcajeBuscarCodigo.this,model);
+        lista.setAdapter(MarcajeAdapter);
        //------------------------------------------
-
                                 }
                                 else
                                 {
                                     Log.d("Get z ",xListMarcaje.getMarcajes().get(0).getLOCAL());//
                                     mcbtxtError.setText("Sin Resultados "+xListMarcaje.getMarcajes().get(0).getTRACVE()+" xx");
-
                                 }
                             } catch (Exception e) {
                                 mcbtxtError.setText("Error Marca1 "+e.getMessage());
