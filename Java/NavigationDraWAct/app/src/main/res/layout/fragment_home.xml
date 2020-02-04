@@ -19,42 +19,59 @@
         <Button
             android:id="@+id/btBuscaFactura"
             style="@android:style/Widget.Button"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginTop="8dp"
+            android:drawableRight="@android:drawable/ic_menu_search"
+            android:padding="16dp"
+            android:textSize="24sp"
             android:text="Buscar Factura" />
 
 
         <Button
             android:id="@+id/btnDescuentoManual"
             style="@android:style/Widget.Holo.Button.Small"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:drawableRight="@android:drawable/ic_menu_search"
+            android:padding="16dp"
+            android:textSize="24sp"
             android:layout_marginTop="8dp"
             android:text="Dar Descuento Manual" />
 
         <Button
             android:id="@+id/btnDesbloquearArt"
             style="@android:style/Widget.DeviceDefault.Button"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="end"
+            android:drawableRight="@android:drawable/ic_menu_search"
+            android:padding="16dp"
+            android:textSize="24sp"
             android:layout_marginTop="8dp"
             android:text="Desbloquear Articulo" />
 
         <Button
             android:id="@+id/btnReimpContraEntrega"
-            style="@android:style/Widget.CompoundButton.Star"
-            android:layout_width="wrap_content"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_marginTop="8dp"
-            android:text="Reimprimir ContraEntrega" />
+            android:drawableRight="@android:drawable/ic_menu_search"
+            android:padding="16dp"
+            android:text="Reimprimir ContraEntrega"
+            android:textSize="24sp" />
 
 
-
+        <Button
+            android:id="@+id/bSearch"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableRight="@android:drawable/ic_menu_search"
+            android:padding="16dp"
+            android:text="Search99"
+            android:textAlignment="textStart"
+            android:textSize="24sp" />
 
     </LinearLayout>
 

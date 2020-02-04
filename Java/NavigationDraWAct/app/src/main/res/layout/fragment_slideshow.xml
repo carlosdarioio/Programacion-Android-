@@ -26,9 +26,11 @@
     <Button
         android:id="@+id/btnDatosCL"
         style="@style/MenuButtons"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="end"
+        android:drawableRight="@android:drawable/ic_menu_search"
+        android:padding="16dp"
+        android:textSize="24sp"
         android:layout_marginTop="16dp"
         android:text="Ver Datos de CL" />
 

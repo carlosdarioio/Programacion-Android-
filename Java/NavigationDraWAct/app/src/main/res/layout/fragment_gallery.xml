@@ -29,8 +29,11 @@
         <Button
             android:id="@+id/btnReimprDepoRet"
             style="@android:style/Widget.Material.Light.Button.Toggle"
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:drawableRight="@android:drawable/ic_menu_search"
+            android:padding="16dp"
+            android:textSize="24sp"
 
             android:layout_marginTop="8dp"
             android:text="Reimprimir  Deposito Retiro" />
@@ -39,8 +42,11 @@
         <Button
             android:id="@+id/btnReimpReciboCaja"
             style="@android:style/Widget.Material.Button.Borderless"
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:drawableRight="@android:drawable/ic_menu_search"
+            android:padding="16dp"
+            android:textSize="24sp"
             android:layout_marginTop="8dp"
             android:text="Reimprimir Recibo de caja" />
 

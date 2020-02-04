@@ -12,55 +12,66 @@
 
         <TextView
             android:id="@+id/text_tools"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@android:drawable/ic_menu_search"
+            android:padding="16dp"
+
             android:textSize="20sp" />
 
 
         <Button
             android:id="@+id/btnReimpTicketDespacho"
             style="@android:style/Widget.CompoundButton.Star"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_marginTop="8dp"
-            android:text="Reimprimir Ticket Despacho" />
+            android:drawableRight="@android:drawable/arrow_down_float"
+            android:padding="16dp"
+            android:text="Reimprimir Ticket Despacho"
+            android:textSize="24sp" />
 
         <Button
             android:id="@+id/btnCambZonaxFactura"
             style="@android:style/Widget.CompoundButton.Star"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="8dp"
-            android:text="Cambiar Zona Factura" />
+            android:drawableRight="?attr/actionModePasteDrawable"
+            android:padding="16dp"
+            android:text="Cambiar Zona Factura"
+
+            android:textSize="24sp" />
 
         <Button
             android:id="@+id/btnRSolTras"
             style="@android:style/Widget.CompoundButton.Star"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_marginTop="8dp"
-            android:text="Reimprimir Sol Traslado" />
+            android:drawableRight="@drawable/ic_menu_send"
+            android:padding="16dp"
+            android:text="Reimprimir Sol Traslado"
+            android:textSize="24sp" />
 
         <Button
             android:id="@+id/btnRSGuiaTras"
             style="@android:style/Widget.CompoundButton.Star"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="8dp"
-            android:text=" Reimprimir guia traslado" />
+            android:drawableRight="@drawable/ic_laptop_chromebook_black_24dp"
+            android:padding="16dp"
+            android:text=" Reimprimir guia traslado"
+            android:textSize="24sp" />
 
         <Button
             android:id="@+id/btnFindPickingGuiaTras"
             style="@android:style/Widget.CompoundButton.Star"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="8dp"
-            android:text="Buscar Picking en guia de traslado" />
+            android:drawableRight="@android:drawable/stat_notify_sync"
+            android:padding="16dp"
+            android:text="Buscar Picking en guia de traslado"
+            android:textSize="24sp" />
 
     </LinearLayout>
 
