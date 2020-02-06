@@ -51,32 +51,47 @@
 
         <Button
             android:text="Imprimir F. Ticket"
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableRight="@drawable/ic_menu_send"
+            android:padding="16dp"
             android:id="@+id/btnImprimirTicket"/>
         <Button
             android:text="Imprmir F. Bodega"
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableRight="@drawable/cfic_panorama_black_24dp"
+            android:padding="16dp"
             android:id="@+id/btnImprimirBD"/>
 
         <Button
             android:text="Imprmir F. Carta +12 Art"
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableRight="@drawable/cfic_style_black_24dp"
+            android:padding="16dp"
             android:id="@+id/btnImprimirFcarta"/>
 
         <Button
-            android:text="Imprmir Entrega +Reciente"
-            android:layout_width="match_parent"
+            android:id="@+id/btnImprimirEnt"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnImprimirEnt"/>
+            android:layout_marginTop="8dp"
+            android:drawableRight="@drawable/cfic_cloud_done_black_24dp"
+            android:padding="16dp"
+            android:text="Imprmir Entrega +Reciente" />
 
         <Button
-            android:text="Crear NC"
-            android:layout_width="match_parent"
+            android:id="@+id/btnCrearNC"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnCrearNC"/>
+            android:layout_marginTop="8dp"
+            android:drawableRight="@drawable/ic_menu_manage"
+            android:padding="16dp"
+            android:text="Crear NC" />
     </LinearLayout>
 
 

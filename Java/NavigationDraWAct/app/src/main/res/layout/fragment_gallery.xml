@@ -31,12 +31,12 @@
             style="@android:style/Widget.Material.Light.Button.Toggle"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:drawableRight="@android:drawable/ic_menu_search"
-            android:padding="16dp"
-            android:textSize="24sp"
-
             android:layout_marginTop="8dp"
-            android:text="Reimprimir  Deposito Retiro" />
+            android:drawableRight="@drawable/ic_menu_gallery"
+            android:padding="16dp"
+
+            android:text="Reimprimir  Deposito Retiro"
+            android:textSize="24sp" />
 
 
         <Button
@@ -44,11 +44,11 @@
             style="@android:style/Widget.Material.Button.Borderless"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:drawableRight="@android:drawable/ic_menu_search"
-            android:padding="16dp"
-            android:textSize="24sp"
             android:layout_marginTop="8dp"
-            android:text="Reimprimir Recibo de caja" />
+            android:drawableRight="@drawable/cfic_style_black_24dp"
+            android:padding="16dp"
+            android:text="Reimprimir Recibo de caja"
+            android:textSize="24sp" />
 
 
     </LinearLayout>

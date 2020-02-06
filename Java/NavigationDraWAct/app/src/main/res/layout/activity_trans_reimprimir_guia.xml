@@ -28,10 +28,12 @@
 
         <Button
             android:id="@+id/TRGNbtnImprimir"
-            android:layout_width="wrap_content"
+            android:layout_width="143dp"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_marginTop="16dp"
+            android:drawableRight="@drawable/ic_menu_gallery"
+            android:padding="16dp"
             android:text="Imprimir" />
 
         <TextView

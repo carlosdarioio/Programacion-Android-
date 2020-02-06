@@ -40,10 +40,11 @@
 
         <Button
             android:id="@+id/MarcarBtnMarcar"
-            android:layout_width="wrap_content"
+            android:layout_width="115dp"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_marginTop="16dp"
+            android:drawableRight="@drawable/cfic_plus_one_black_24dp"
             android:text="Marcar" />
 
         <TextView

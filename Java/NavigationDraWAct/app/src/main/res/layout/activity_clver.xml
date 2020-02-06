@@ -58,10 +58,11 @@
 
 
         <Button
-            android:text="Bloquear / Desbloquear"
+            android:id="@+id/clbtnblckUn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/clbtnblckUn"/>
+            android:drawableRight="@drawable/ic_perm_scan_wifi_black_24dp"
+            android:text="Bloquear / Desbloquear" />
 
 
 

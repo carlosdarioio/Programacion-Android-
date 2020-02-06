@@ -42,13 +42,15 @@
             android:inputType="number"
             android:ems="10"
             android:id="@+id/almacen"
+
             android:hint="Almacen"/>
 
         <Button
-            android:text="Aplicar"
+            android:id="@+id/btnDescArt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnDescArt"/>
+            android:drawableRight="@drawable/cfic_cloud_done_black_24dp"
+            android:text="Aplicar" />
 
 
     </LinearLayout>

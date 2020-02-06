@@ -28,10 +28,11 @@
 
         <Button
             android:id="@+id/TransbtnBuscar"
-            android:layout_width="wrap_content"
+            android:layout_width="124dp"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_marginTop="16dp"
+            android:drawableRight="@drawable/cfic_find_in_page_black_24dp"
             android:text="Buscar" />
 
         <TextView

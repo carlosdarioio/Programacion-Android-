@@ -27,10 +27,11 @@
 
         <Button
             android:id="@+id/btnBuscar"
-            android:layout_width="wrap_content"
+            android:layout_width="112dp"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_marginTop="16dp"
+            android:drawableRight="@drawable/ic_menu_send"
             android:text="Buscar" />
 
         <TextView

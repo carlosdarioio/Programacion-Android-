@@ -45,10 +45,13 @@
 
 
         <Button
-            android:text="Imprimir Transferencia"
-            android:layout_width="match_parent"
+            android:id="@+id/transbtnImprimirT"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/transbtnImprimirT"/>
+            android:layout_marginTop="8dp"
+            android:drawableRight="@drawable/cfic_plus_one_black_24dp"
+            android:padding="16dp"
+            android:text="Imprimir Transferencia" />
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

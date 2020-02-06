@@ -54,10 +54,11 @@
             android:hint="20191226"/>
 
         <Button
-            android:text="Aplicar"
+            android:id="@+id/btnDescuento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnDescuento"/>
+            android:drawableRight="@drawable/ic_menu_manage"
+            android:text="Aplicar" />
 
 
     </LinearLayout>
