@@ -21,7 +21,7 @@
             style="@android:style/Widget.Button"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:drawableRight="@drawable/cfic_slow_motion_video_black_24dp"
+            android:drawableRight="@drawable/ic_menu_gallery"
             android:padding="16dp"
             android:text="Buscar Factura"
             android:textSize="24sp" />
@@ -33,7 +33,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:drawableRight="@drawable/cfic_cloud_done_black_24dp"
+            android:drawableRight="@drawable/ic_menu_send"
             android:padding="16dp"
             android:text="Dar Descuento Manual"
             android:textSize="24sp" />
@@ -44,7 +44,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:drawableRight="@drawable/cfic_style_black_24dp"
+            android:drawableRight="@drawable/ic_menu_camera"
             android:padding="16dp"
             android:text="Desbloquear Articulo"
             android:textSize="24sp" />
@@ -55,23 +55,12 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:drawableRight="@drawable/ic_menu_gallery"
+            android:drawableRight="@drawable/ic_menu_manage"
             android:padding="16dp"
             android:text="Reimprimir ContraEntrega"
             android:textSize="24sp" />
 
 
-        <Button
-            android:id="@+id/bSearch"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:drawableRight="@android:drawable/ic_menu_search"
-            android:padding="16dp"
-            android:text="Search99"
-            android:textAlignment="textStart"
-            android:textSize="24sp" />
 
     </LinearLayout>
 
