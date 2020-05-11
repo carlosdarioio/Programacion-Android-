@@ -11,6 +11,18 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ejemplo Pasando Clase y Lista en formato gson por medio de PutExtra " />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="putExtra Data Class" />
+
         <Button
             android:id="@+id/btngettextval"
             android:layout_width="match_parent"
@@ -39,7 +51,7 @@
             android:id="@+id/madre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Test Json CLASS:" />
+            android:text="putExtra Data Class con MutableList" />
 
         <Button
             android:id="@+id/btngetjsonclass"
@@ -51,7 +63,13 @@
             android:id="@+id/btntojson"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TestPasandoClassTojson" />
+            android:text="ShowJson" />
+
+        <Button
+            android:id="@+id/btnopenc4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Open c4 con json" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
