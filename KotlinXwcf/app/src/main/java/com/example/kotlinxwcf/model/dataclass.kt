@@ -4,6 +4,6 @@ import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
 data class classUser(
-    var ProductId: Int,
-    var Quantity: Int
+    @SerializedName("name") var name: String,
+    @SerializedName("age") var age: Int
 ):Serializable

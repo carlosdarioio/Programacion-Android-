@@ -15,13 +15,13 @@ class Main2Activitytext : AppCompatActivity() {
         setContentView(R.layout.activity_main2_activitytext)
         var people = intent.getSerializableExtra("putuser") as? classUser
         btngettxt.setOnClickListener {
-            Toast.makeText(applicationContext,"tiene ${people?.ProductId}", Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext,"tiene ${people?.name}", Toast.LENGTH_SHORT).show()
             //Toast.makeText(applicationContext,"tiene ${MainActivity().ztext}", Toast.LENGTH_SHORT).show()
         }
 
         btnchangetxt.setOnClickListener{
             //MainActivity().ztext="activity_main2_activitytext"
-            people?.ProductId=2
+            people?.name="Main2text"
         }
 
         btnopenclas1.setOnClickListener {
@@ -32,7 +32,7 @@ class Main2Activitytext : AppCompatActivity() {
         }
 
         btnopenclas3.setOnClickListener {
-            val intent = Intent(this, Main3Activitytext::class.java)
+            val intent = Intent(this, Main2Activitytext::class.java)
             intent.putExtra("putuser",people)
             startActivity(intent)
             finish();

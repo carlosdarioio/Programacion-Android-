@@ -11,18 +11,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ejemplo Pasando Clase y Lista en formato gson por medio de PutExtra " />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="putExtra Data Class" />
-
         <Button
             android:id="@+id/btngettextval"
             android:layout_width="match_parent"
@@ -51,7 +39,7 @@
             android:id="@+id/madre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="putExtra Data Class con MutableList" />
+            android:text="Test Json CLASS:" />
 
         <Button
             android:id="@+id/btngetjsonclass"
@@ -63,13 +51,31 @@
             android:id="@+id/btntojson"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ShowJson" />
+            android:text="TestPasandoClassTojson" />
 
-        <Button
-            android:id="@+id/btnopenc4"
+        <TextView
+            android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Open c4 con json" />
+            android:text="testStartForresult" />
+
+        <Button
+            android:id="@+id/btnstartForr1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="btnstartForr1" />
+
+        <Button
+            android:id="@+id/btnstartForr2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="btnstartForr2" />
+
+        <Button
+            android:id="@+id/btnstartForr3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="btnstartForr3" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

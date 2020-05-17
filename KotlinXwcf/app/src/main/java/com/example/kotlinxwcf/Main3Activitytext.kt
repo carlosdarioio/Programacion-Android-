@@ -16,11 +16,11 @@ class Main3Activitytext : AppCompatActivity() {
         var people = intent.getSerializableExtra("putuser") as? classUser
 
         btngettext.setOnClickListener {
-            Toast.makeText(applicationContext,"tiene ${people?.ProductId}", Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext,"tiene ${people?.name}", Toast.LENGTH_SHORT).show()
         }
 
         btnchangetext.setOnClickListener {
-            people?.ProductId=3
+            people?.name="Main3text"
         }
 
         btnopenclass1.setOnClickListener {
