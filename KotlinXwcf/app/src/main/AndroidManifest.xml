@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Main4StartActivityForResult"></activity>
+        <activity android:name=".Main6StartActivityForResult"></activity>
+        <activity android:name=".Main5StartActivityForResult2" />
+        <activity android:name=".Main4StartActivityForResult" />
         <activity android:name=".Main3Activitytext" />
         <activity android:name=".Main2Activitytext" />
         <activity android:name=".model.Main2ActivityShowtxt" />

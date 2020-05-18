@@ -86,11 +86,15 @@ var datalist=xData(null)
         }
 
         btnstartForr2.setOnClickListener {
-
+            val intent = Intent(this, Main5StartActivityForResult2::class.java)
+            intent.putExtra("putuser",xUser)
+            startActivityForResult(intent,4 )
         }
 
         btnstartForr3.setOnClickListener {
-
+            val intent = Intent(this, Main6StartActivityForResult::class.java)
+            intent.putExtra("putuser",xUser)
+            startActivityForResult(intent,4 )
         }
 
 
@@ -101,23 +105,17 @@ var datalist=xData(null)
     //Recibiendo ActivityForResult
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-
         // Check that it is the SecondActivity with an OK result
         if (requestCode == 4) {
             if (resultCode == Activity.RESULT_OK) {
-
-                //var people = intent.getSerializableExtra("putuser") as classUser
-                // Get String data from Intent
                 val returnString = data!!.getSerializableExtra("putuser") as classUser
-
-                // Set text view with string
                 xUser=returnString
+                textView.setText(xUser.name+xUser.age.toString())
                 Log.d("Nwuser",xUser.name)
-                Log.d("Nwuser",xUser.age.toString())
-            }else
+                Log.d("Nage",xUser.age.toString())
+            }else if(resultCode == Activity.RESULT_CANCELED)
             {
-                //x aqui vas pendiente ver si recibe y devuelve
-                Log.d("Nwuser","")
+                Log.d("cancel","canzelado")
             }
         }
     }

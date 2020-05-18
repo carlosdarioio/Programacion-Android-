@@ -16,8 +16,8 @@ class Main4PutExtraJsonClass : AppCompatActivity() {
         var peoplestring = intent.getSerializableExtra("putuser")
         var people = gson.fromJson(peoplestring.toString(), xData::class.java)
         Log.d("peopleString ",peoplestring.toString())
-        Log.d("DataClass ",people.BillingAddressId)
-        people.BillingAddressId="Terminamos el ejemplo pasando dataclass en formato json"
-        textView2.text="Listo, ${people.BillingAddressId}"
+        //Log.d("DataClass ",people.lista[0].name.toString())
+        //people.BillingAddressId="Terminamos el ejemplo pasando dataclass en formato json"
+        //textView2.text="Listo, ${people.BillingAddressId}"
     }
 }
